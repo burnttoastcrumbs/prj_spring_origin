@@ -33,9 +33,21 @@
 		WHERE 1 = 1
 			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
 	</select>
+
+
+		<select id="loginUser" resultMap="resultMapObj">
+			SELECT
+				id_Email,
+				password,
+				name
+			FROM
+				member
+			WHERE	1=1
+			  AND id_Email = #{id_Email}
+			  AND password = #{password}
+		</select>
+
 	<select id="selectOne" resultMap="resultMapObj">
-
-
 		SELECT
 		<include refid="abc" />
 		FROM

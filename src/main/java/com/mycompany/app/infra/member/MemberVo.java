@@ -1,4 +1,4 @@
-package com.mycompany.app.infra.code.member;
+package com.mycompany.app.infra.member;
 
 public class MemberVo {
 
@@ -6,6 +6,16 @@ public class MemberVo {
 	private String shKeyword;
 	private String seq;
 	private Integer delNy;
+
+	private String id_Email;
+
+
+
+	private String password;
+
+	private String name;
+
+
 //	-----
 	public Integer getShOption() {
 		return shOption;
@@ -32,4 +42,31 @@ public class MemberVo {
 		this.delNy = delNy;
 	}
 
+
+	public String getId_Email() {
+		return id_Email;
+	}
+
+	public void setId_Email(String id_Email) {
+		this.id_Email = id_Email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 }
+
+

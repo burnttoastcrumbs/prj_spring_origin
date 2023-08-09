@@ -1,4 +1,4 @@
-package com.mycompany.app.infra.code.member;
+package com.mycompany.app.infra.member;
 
 public class Member {
 
@@ -13,6 +13,8 @@ public class Member {
 	private String password;
 	private String gender;
 	private String dob;
+
+
 	
 //	----- 우클릭 source / generate getter, setter
 	

@@ -1,4 +1,4 @@
-package com.mycompany.app.infra.code.member;
+package com.mycompany.app.infra.member;
 
 import java.util.List;
 
@@ -15,4 +15,5 @@ public interface MemberService {
 	
 	public int uelete(Member dto);
 
+    public Member loginUser(MemberVo vo);
 }

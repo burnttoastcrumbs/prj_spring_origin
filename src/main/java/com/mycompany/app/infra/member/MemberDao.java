@@ -1,4 +1,4 @@
-package com.mycompany.app.infra.code.member;
+package com.mycompany.app.infra.member;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
@@ -37,6 +37,11 @@ public class MemberDao {
 	public Member selectOne(MemberVo vo) {
 		Member code = sqlSession.selectOne(namespace + ".selectOne", vo); 
 		return code;
+	}
+
+	public Member loginUser(MemberVo vo) {
+		Member loginUser = sqlSession.selectOne(namespace + ".loginUser", vo);
+		return loginUser;
 	}
 	
 	

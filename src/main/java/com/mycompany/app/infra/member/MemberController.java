@@ -1,4 +1,4 @@
-package com.mycompany.app.infra.code.member;
+package com.mycompany.app.infra.member;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

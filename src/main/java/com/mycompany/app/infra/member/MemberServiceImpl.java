@@ -1,4 +1,4 @@
-package com.mycompany.app.infra.code.member;
+package com.mycompany.app.infra.member;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,4 +39,9 @@ import java.util.List;
 
 	@Override
 	public int uelete(Member dto) {return dao.uelete(dto); }
-}
+
+		@Override
+		public Member loginUser(MemberVo vo) {
+			return dao.loginUser(vo);
+		}
+	}
