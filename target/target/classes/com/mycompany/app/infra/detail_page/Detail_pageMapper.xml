@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+
+<mapper namespace="com.mycompany.app.infra.detail_page.Detail_pageMapper">
+
+	<resultMap type="com.mycompany.app.infra.detail_page.Detail_page" id="resultMapObj"></resultMap>
+	<!-- Order에 있는 private string 의 정보를 받아서 resultMapObj가 crud에서 id로 불려감-->
+ 
+ 	<sql id="abc">
+ 		seq,
+		theme_name,
+		theme,
+		detailPage_title,
+		detailPage_Detail,
+		detailPage_hashtag_name,
+		detailPage_hashtag,
+		detailPage_hashtag2_name,
+		detailPage_hashtag2,
+		detailPage_hashtag3_name,
+		detailPage_hashtag3,
+		nights,
+		days,
+		readyToStart,
+		detailPage_img,
+		adult_price,
+		child_price,
+		toddler_price,
+		total_price,
+		adult_number,
+		child_number,
+		toddler_number,
+		`like`,
+		flight,
+		flight_name,
+		fuel_surcharge,
+		flightLogoImg,
+		min_passenger,
+		seat_number,
+		F_startYear,
+		F_startMonth,
+		F_startDate,
+		F_startWhatDay,
+		F_startHour,
+		F_startMinute,
+		F_arriveYear,		F_arriveMonth,		F_arriveDate,		F_arriveWhatDay,		F_arriveHour,		F_arriveMinute,
+		L_startYear,
+		L_startMonth,
+		L_startDate,
+		L_startWhatDay,
+		L_startHour,
+		L_startMinute,
+		L_arriveYear,
+		L_arriveMonth,
+		L_arriveDate,
+		L_arriveWhatDay,
+		L_arriveHour,
+		L_arriveMinute,
+		F_flightHour,
+		F_flightMinute,
+		L_flightHour,
+		L_flightMinute,
+		layover,
+	 	F_flightCode,
+		L_flightCode,
+		reservedSeatNumber,
+		MiddlePageTitle,
+		country_name,
+		country,
+		MainPageTitle,
+		MainPageDetail,
+		defNy
+	</sql>
+ 
+ 	<sql id ="selectCommon">
+   		FROM    
+	    	detail_page
+		WHERE 1=1
+			<if test="shKeyword != null and !shKeyword.equals('')">AND detailPage_title LIKE CONCAT('%',#{shKeyword},'%')</if>
+			<!-- 검색명(나는 detailPage_title로 검색할 거임) -->
+    </sql>
+    <!-- 검색 용도 -->
+
+   	<select id="selectOneCount" resultType="Integer">
+		SELECT count(*)
+		<include refid="selectCommon" />
+	</select>
+	<!-- ex) '사' 검색 : 사과, 사이다. 2개가 뜸. '사' 목록의 개수를 카운트 -->
+
+
+
+   	<select id="selectList" resultMap="resultMapObj">
+		SELECT aa.* FROM (   	
+	   		SELECT
+				<include refid="abc" />
+	   			<include refid="selectCommon" />
+	   			<!-- 내가 검색한 거 -->
+		) aa
+		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+   	</select>
+ 	<!-- 페이징임 -->
+ 
+ 
+ 	
+ 	<select id="selectOne" resultMap="resultMapObj">
+ 		select
+ 			<include refid="abc" />
+ 		from
+ 			detail_page
+ 		where 1=1
+ 			and	seq = #{seq}
+ 			<!-- 문자 검색은 대부분 like를 사용 -->
+ 			<!--ex)김철수 검색 : 김철수(seq1임) -> seq 1에 대한 abc 정보가 출력됨 -->
+ 	</select>
+ 	
+ 	<select id="weekbest" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND weekbest = 1
+ 			AND defNy = 1;
+ 	</select>
+ 	
+ 	<select id="weekpopular" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND weekpopular = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	<select id="weekrecommend" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND weekrecommend = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	<select id="hanapack" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND hanapack = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	
+ 	<select id="mine" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND mine = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	<select id="mainTaiwan" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND mainTaiwan = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	<select id="mainJapan" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND mainJapan = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	<select id="mainEurope" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND mainEurope = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	<select id="mainNew" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND mainNew = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	<select id="mainAmerica" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND mainAmerica = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	<select id="mainChina" resultMap="resultMapObj">
+ 		select
+ 			mainPageTitle,
+ 			mainPageDetail,
+ 			adult_price,
+ 			detailPage_img
+ 		From 
+ 			detail_page
+ 		where 1=1
+ 			AND mainChina = 1
+ 			AND defNy = 1
+ 	</select>
+ 	
+ 	
+ <update id="update" >
+ 	update
+ 		detail_page
+ 	set
+ 		theme_name = #{theme_name},
+		theme = #{theme},
+		detailPage_title = #{detailPage_title},
+		detailPage_Detail= #{detailPage_Detail},
+		detailPage_hashtag_name = #{detailPage_hashtag_name},
+		detailPage_hashtag = #{detailPage_hashtag},
+		detailPage_hashtag2_name = #{detailPage_hashtag2_name},
+		detailPage_hashtag2 = #{detailPage_hashtag2},
+		detailPage_hashtag3_name = #{detailPage_hashtag3_name},
+		detailPage_hashtag3 = #{detailPage_hashtag3},
+		nights = #{nights},
+		days = #{days},
+		readyToStart = #{readyToStart},
+		detailPage_img = #{detailPage_img},
+		adult_price = #{adult_price},
+		child_price = #{child_price},
+		toddler_price = #{toddler_price},
+		total_price = #{total_price},
+		adult_number = #{adult_number},
+		child_number = #{child_number},
+		toddler_number = #{toddler_number},
+		`like` = #{like},
+		flight = #{flight},
+		flight_name = #{flight_name},
+		fuel_surcharge = #{fuel_surcharge},
+		flightLogoImg = #{flightLogoImg},
+		min_passenger = #{min_passenger},
+		seat_number = #{seat_number},
+		F_startYear = #{F_startYear},
+		F_startMonth = #{F_startMonth},
+		F_startDate = #{F_startDate},
+		F_startWhatDay = #{F_startWhatDay},
+		F_startHour = #{F_startHour},
+		F_startMinute = #{F_startMinute},
+		F_arriveYear = #{F_arriveYear},
+		F_arriveMonth = #{F_arriveMonth},
+		F_arriveDate = #{F_arriveDate},
+		F_arriveWhatDay = #{F_arriveWhatDay},
+		F_arriveHour = #{F_arriveHour},
+		F_arriveMinute = #{F_arriveMinute},
+		L_startYear = #{L_startYear},
+		L_startMonth = #{L_startMonth},
+		L_startDate = #{L_startDate},
+		L_startWhatDay = #{L_startWhatDay},
+		L_startHour = #{L_startHour},
+		L_startMinute = #{L_startMinute},
+		L_arriveYear = #{L_arriveYear},
+		L_arriveMonth = #{L_arriveMonth},
+		L_arriveDate = #{L_arriveDate},
+		L_arriveWhatDay = #{L_arriveWhatDay},
+		L_arriveHour = #{L_arriveHour},
+		L_arriveMinute = #{L_arriveMinute},
+		F_flightHour = #{F_flightHour},
+		F_flightMinute = #{F_flightMinute},
+		L_flightHour = #{L_flightHour},
+		L_flightMinute = #{L_flightMinute},
+		layover = #{layover},
+	 	F_flightCode = #{F_flightCode},
+		L_flightCode = #{L_flightCode},
+		reservedSeatNumber = #{reservedSeatNumber},
+		MiddlePageTitle = #{MiddlePageTitle},
+		country_name = #{country_name},
+		country = #{country},
+		mainPageTitle = #{mainPageTitle},
+		mainPageDetail = #{mainPageDetail}
+ 	where 1=1
+ 		and seq = #{seq}
+ </update>
+ <!-- 추후에 바뀔 수 있는 컬럼들을 update set에다가 넣음 -->
+ 
+ <delete id="delete">
+ 	delete
+ 	from
+ 		detail_page
+ 	where 1=1
+ 		and seq = #{seq}
+ </delete>
+ 
+ <insert id="insert">
+ 	insert into 
+ 	detail_page (
+ 		theme_name,
+		theme,
+		detailPage_title,
+		detailPage_Detail,
+		detailPage_hashtag_name,
+		detailPage_hashtag,
+		detailPage_hashtag2_name,
+		detailPage_hashtag2,
+		detailPage_hashtag3_name,
+		detailPage_hashtag3,
+		nights,
+		days,
+		readyToStart,
+		detailPage_img,
+		adult_price,
+		child_price,
+		toddler_price,
+		total_price,
+		adult_number,
+		child_number,
+		toddler_number,
+		`like`,
+		flight,
+		flight_name,
+		fuel_surcharge,
+		flightLogoImg,
+		min_passenger,
+		seat_number,
+		F_startYear,
+		F_startMonth,
+		F_startDate,
+		F_startWhatDay,
+		F_startHour,
+		F_startMinute,
+		F_arriveYear,
+		F_arriveMonth,
+		F_arriveDate,
+		F_arriveWhatDay,
+		F_arriveHour,
+		F_arriveMinute,
+		L_startYear,
+		L_startMonth,
+		L_startDate,
+		L_startWhatDay,
+		L_startHour,
+		L_startMinute,
+		L_arriveYear,
+		L_arriveMonth,
+		L_arriveDate,
+		L_arriveWhatDay,
+		L_arriveHour,
+		L_arriveMinute,
+		F_flightHour,
+		F_flightMinute,
+		L_flightHour,
+		L_flightMinute,
+		layover,
+	 	F_flightCode,
+		L_flightCode,
+		reservedSeatNumber,
+		MiddlePageTitle,
+		country_name,
+		country
+ 		)value(
+ 			#{theme_name},
+			#{theme},
+			#{detailPage_title},
+			#{detailPage_Detail},
+			#{detailPage_hashtag_name},
+			#{detailPage_hashtag},
+			#{detailPage_hashtag2_name},
+			#{detailPage_hashtag2},
+			#{detailPage_hashtag3_name},
+			#{detailPage_hashtag3},
+			#{nights},
+			#{days},
+			#{readyToStart},
+			#{detailPage_img},
+			#{adult_price},
+			#{child_price},
+			#{toddler_price},
+			#{total_price},
+			#{adult_number},
+			#{child_number},
+			#{toddler_number},
+			#{like},
+			#{flight},
+			#{flight_name},
+			#{fuel_surcharge},
+			#{flightLogoImg},
+			#{min_passenger},
+			#{seat_number},
+			#{F_startYear},
+			#{F_startMonth},
+			#{F_startDate},
+			#{F_startWhatDay},
+			#{F_startHour},
+			#{F_startMinute},
+			#{F_arriveYear},
+			#{F_arriveMonth},
+			#{F_arriveDate},
+			#{F_arriveWhatDay},
+			#{F_arriveHour},
+			#{F_arriveMinute},
+			#{L_startYear},
+			#{L_startMonth},
+			#{L_startDate},
+			#{L_startWhatDay},
+			#{L_startHour},
+			#{L_startMinute},
+			#{L_arriveYear},
+			#{L_arriveMonth},
+			#{L_arriveDate},
+			#{L_arriveWhatDay},
+			#{L_arriveHour},
+			#{L_arriveMinute},
+			#{F_flightHour},
+			#{F_flightMinute},
+			#{L_flightHour},
+			#{L_flightMinute},
+			#{layover},
+	 		#{F_flightCode},
+			#{L_flightCode},
+			#{reservedSeatNumber},
+			#{MiddlePageTitle},
+			#{country_name},
+			#{country}
+ 		)
+ 
+ </insert>
+ 
+ 
+ 	
+</mapper>
