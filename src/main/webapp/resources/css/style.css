@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; border: 0;}
+a {text-decoration: none;}
+ul {list-style: none;}
+
+#main {width: 100%; height: 100vh; background-color:rgba(0, 0, 0, 0.1)}
+#wrap {width: 60%; height: 100%; background-color:rgba(0, 0, 0, 0.1); margin: auto;}
+#link {width: 100%; height: 7%; background-color:rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center; font-size: 1.5vw;}
+#profile {width: 80%; height: 300px; background-color:rgba(0, 0, 0, 0.1); display: flex; justify-content: space-around; margin: 5% auto;}
+#portfolio {width: 100%; height: 46%; background-color:rgba(0, 0, 0, 0.1); margin-top: 5%; display: flex; justify-content: space-between;}
+#portfolio img {width: 100%;}
+#hana {display: flex; align-items: center;}
+.meme {width: 48%; height: 100%; background-color:white; font-size: 1.3vw; cursor: pointer;}
+#pic {display: flex; justify-content: center; align-items: center;}
+#man {width: 300px; height: 300px; background-color: white; display: flex; align-items: center; border-radius: 50%; overflow: hidden;}
+#man img {width: 100%;}
+.padding {padding: 20px 0; box-sizing: border-box;}

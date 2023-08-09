@@ -1,0 +1,21 @@
+@charset "utf-8";
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+body {font-family: 'Noto Sans KR', sans-serif; width: 100%; height: 100vh; background-color:#f4f5f9;}
+
+section {width: 768px; height: 100%; background-color: white; margin: auto; padding: 25px; box-sizing: border-box;}
+h3 {    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold; margin: 0;}
+h3 i {margin-right: 10px; cursor: pointer;}
+section p {margin-bottom: 50px;}
+section p:first-of-type {margin-top: 50px; font-size: 25px; margin-bottom: 15px;}
+#bookmark {width: 100%; height: 50px; border-radius: 25px; border: #eee solid 1px; box-sizing: border-box; background-color: #eee; font-weight: bold; font-size: 16px; margin-top: 50px; cursor: pointer; margin-bottom: 20px;}
+.col-md-6 {width: 100%;}
+.col-md-6:nth-child(2) {width: 80%;}
+.col-md-6:nth-child(3) {width: 18%;}
