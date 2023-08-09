@@ -1,0 +1,120 @@
+@charset "utf-8";
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+body {font-family: 'Noto Sans KR', sans-serif;}
+
+
+/* 헤더 */
+#header1 {width: 100%; height: 35px;}
+#header2 {width: 100%; height: 75px;}
+.header_wrap {width: 60%; height: 100%; min-width: 960px; margin: auto; display: flex; align-items: center;}
+#header_wrap1 {justify-content: flex-end; }
+#header_wrap2 {justify-content: space-between;}
+#header1 ul {display: flex; font-size: 13px;}
+#header1 ul a {margin-left: 10px; color:black;}
+#header1 ul a:hover {color: rgb(94, 43, 184);}
+#header2-1 {width: 600px; min-width: 600px; height: 100%; display: flex; align-items: center; justify-content: space-between; position: relative;}
+#header2-1 img {width: 150px; height: 36px; cursor: pointer;}
+#header2-1 input {height :44px; border-radius: 22px; border: 2px solid black; box-sizing: border-box; width: 420px; padding-left: 15px; font-size: 15px;}
+#header2-1 input::placeholder {color: darkgray;}
+#header2-1 i {position: absolute; right:20px; font-size: 20px;}
+#header2-2 {width: 170px; height: 100%; display: flex;}
+#header2-2 i {font-size: 25px; margin-bottom: 3px;}
+#header2-2>ul {display: flex; text-align: center;}
+#header2-2>ul>li {display: flex; align-items: center; justify-content: center; width: 60px;}
+#header2-2>ul a {color:black; font-size: 10px;}
+#header2-2>ul a:hover {color: rgb(94, 43, 184);}
+
+/* hover */
+.main_menu {display: flex; justify-content: center;}
+#hover {position: relative;;}
+.sub_menu {width: 200px; height: fit-content; background: #fff; position: absolute; left: 50%; top: 60px; transform: translateX(-50%);  border: black solid 1px; box-sizing: border-box; background-color: #eee; padding-top: 13px; font-size: 13px; line-height: 20px; display: none; z-index: 999;}
+#header2-2 .sub_menu li:first-child {width: 100%; height: 60px; background-color: #eee; box-sizing: border-box; padding: 0 20px;}
+#header2-2 .sub_menu li:last-child {width: 100%; height: 125px; background-color: white; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+.sub_menu span {color:rgb(94, 43, 184);}
+.sub_menu button {width: 80%; height: 40px; background-color: #fff; border-radius: 5px; border: 1px solid rgb(94, 43, 184); cursor: pointer; color:rgb(94, 43, 184); }
+.sub_menu button:first-child {margin-bottom: 10px; color:#555; border: 1px solid #aaa;}
+.sub_menu button:first-child:hover {border:1px black solid; color:black;}
+/* nav */
+.center_wrap {width: 1200px; box-sizing: border-box; margin: auto;}
+#nav {height: 55px; width: 100%; background-color: #fff; z-index: 500; border-bottom: #000 solid 1px; border-top: #ddd solid 1px; box-sizing: border-box; display: flex; align-items: center;}
+#lnb_pc {display: block; width: 100%; height: 40px;}
+#lnb_pc .main_menu {display: flex; justify-content: flex-end; height: 100%;}
+#lnb_pc .main_menu>li {margin-left: 40px; position: relative; display: flex; align-items: center;}
+#lnb_pc .main_menu>li>a {font-size: 19px; font-weight: 300; color:black;}
+#lnb_pc .main_menu>li:first-child>a,
+#lnb_pc .main_menu>li:nth-child(2)>a,
+#lnb_pc .main_menu>li:nth-child(3)>a,
+#lnb_pc .main_menu>li:nth-child(4)>a {color:rgb(94, 43, 184); font-weight: bold;}
+#lnb_pc .sub_menu {background: #fff; position: absolute; left: 50%; top: 40px;
+    padding:30px; transform: translateX(-50%); box-shadow: 0 0 10px rgba(0,0,0,.15);
+    display: none;
+}
+#lnb_pc .sub_menu>li {margin-bottom: 10px;}
+#lnb_pc .sub_menu>li>a {color:black; font-size: 16px;}
+#lnb_pc .sub_menu a:hover {text-decoration: underline;}
+
+/* 내용 */
+section {width: 100%; height: fit-content; background-color: #f4f5f7;}
+.section_wrap {width: 768px; height: fit-content; background-color: white; margin: auto; margin-bottom: 20px; padding: 25px; box-sizing: border-box;}
+.section_wrap:last-child {margin-bottom: 0;}
+
+
+
+.reservation p, .purchase_info_wrap p:first-child,.customer_info_wrap p:first-child {font-size: 20px; margin-bottom: 20px; font-weight: bold;}
+.reservation p:nth-of-type(2) {font-weight: normal;}
+.num {width: 100%; height: 40px; background-color: #f5f5f5; border-radius: 7px; display: flex; align-items: center; padding: 0 20px; box-sizing: border-box;}
+.num>span {font-size: 14px; color:#aaa; margin-right: 20px;}
+.num ul {display: flex;}
+.num ul li {margin-right: 15px;}
+.the_date {width: 100%; height: fit-content; margin-top: 20px; border: #ddd solid 1px; box-sizing: border-box; border-radius: 10px; position: relative;}
+.purchase_info_wrap p:first-child i {cursor: pointer;}
+.purchase_info_wrap p:first-child span{font-weight: bold;}
+#purchase_info>p, .purchase_info_wrap p, .customer_info_wrap p, .flight_info_wrap p {display: flex; justify-content: space-between;}
+.purchase_info_wrap {width: 100%; height: fit-content; border-bottom:  1px dashed #ddd; margin-bottom: 20px;}
+.purchase_info_wrap p:nth-child(2) span:last-child span {font-weight: bold;}
+.purchase_info_wrap p:nth-child(3) {margin: 10px 0 20px; font-size: 14px; color: #aaa;}
+.purchase_info_wrap p:nth-child(3) span i {margin-right: 15px; font-size: 18px;}
+#purchase_info>p:first-of-type {font-weight: bold;}
+#purchase_info>p:first-of-type span:last-child {color:rgb(94, 43, 184);}
+#purchase_info>p:first-of-type span:last-child span {font-size: 24px;}
+#purchase_info>p:last-of-type {display: block; text-align: end; margin: 20px 0 60px; color: #aaa;}
+#purchase_info button {width: 100%; height: 50px; border-radius: 25px; background-color:rgb(94, 43, 184); color: white; cursor: pointer; margin-bottom: 100px;}
+#purchase_info button p:first-child {font-size: 12px;}
+#purchase_info button p:last-child {font-size: 17px; font-weight: bold;}
+.customer_info_wrap p>span:first-of-type, .flight_info_wrap p>span:first-of-type {font-size: 14px; color: #aaa;}
+.flight_info_wrap p>span:last-of-type {font-size: 16px; color: black;}
+.flight_info_wrap p, .date_info p {margin-bottom: 0; font-weight: normal;}
+.flight_info_wrap {padding: 20px; box-sizing: border-box;}
+.date_info {width: 100%; height: 70px; display: flex; border-bottom: 1px dashed #ddd; box-sizing: border-box; display: flex; align-items: center;}
+.start_date, .arrive_date {width: 45%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.start_date p:first-child, .arrive_date p:first-child {font-size: 14px;}
+.start_date p:last-child, .arrive_date p:last-child {font-weight: bold;}
+.dayNnight {width: 10%; height: fit-content; display: flex; align-items: center; justify-content: center; background-color: #5e2bb8; padding: 3px; border-radius: 15px;}
+.dayNnight p {color:white; font-size: 15px;}
+.flight_info_wrap i {margin: 0 5px;}
+.left_circle {width: 25px; height: 25px; background-color: white; float: left; border-radius: 50%; border: 1px solid #ddd; background-origin: padding-box; z-index: 1; position: absolute; top:56px; left:-14px;}
+.right_circle {width: 25px; height: 25px; background-color: white; float: left; border-radius: 50%; border: 1px solid #ddd; background-origin: padding-box; z-index: 1; position: absolute; top:56px; right:-14px;}
+.erase_left {width: 16px; height: 30px; background-color: white; position: absolute; top:55px; left:-17px; z-index: 2;}
+.erase_right {width: 16px; height: 30px; background-color: white; position: absolute; top:55px; right:-17px; z-index: 2;}
+
+
+/* 푸터 */
+#footer {width: 100%; height: 57px; border-top: #ddd solid 1px; box-sizing: border-box;}
+#sns {width: 270px; height: 100%; float:right; display: flex; align-items: center; justify-content: space-between;}
+#footer a {width: 30px; height: 30px; color:white; border-radius: 50%; background-size: cover; background-position: center; cursor: pointer;}
+#footer a:first-child {background-image: url("../img/facebook.png");}
+#footer a:nth-child(2) {background-image: url("../img/instagram.png");}
+#footer a:nth-child(3) {background-image: url("../img/naverblog.png");}
+#footer a:nth-child(4) {background-image: url("../img/kakaoplus.png");}
+#footer a:nth-child(5) {background-image: url("../img/youtube.png");}
+#footer a:last-child {background-image: url("../img/kakaostory.png");}
+.wrap {width: 65%; height: 100%; margin: auto; min-width: 1200px;}
+#footer_wrap {padding-left: 20px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; color:#666; font-weight: normal;}
+
+/* 위로 */
+aside {width: 80px; height: 90px; border: 1px solid black; box-sizing: border-box; cursor: pointer; text-align: center; padding-top: 15px; box-sizing: border-box; position:fixed; right: 20px; bottom:10%; background-color: white;}
+aside span {margin-left: 10px;}
+aside a {font-size: 18px; color:black;}
+aside a i {font-size: 25px;}
