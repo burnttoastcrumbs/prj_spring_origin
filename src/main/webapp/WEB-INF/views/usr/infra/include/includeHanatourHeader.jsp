@@ -102,72 +102,112 @@
                     </li>
                     <li><a href="#">유럽</a>
                         <ul class="sub_menu">
-                            <li><a href="#">이탈리아</a>
-                            </li>
-                            <li><a href="#">스페인</a>
-                            </li>
-                            <li><a href="#">프랑스</a>
-                            </li>
-                            <li><a href="#">체코</a>
-                            </li>
-                            <li><a href="#">스위스</a>
-                            </li>
-                            <li><a href="#">크로아티아</a>
-                            </li>
-                            <li><a href="#">노르웨이</a>
-                            </li>
-                            <li><a href="#">덴마크</a>
-                            </li>
+                            <c:forEach items="${europe}" var="europe" varStatus="status">
+                                <li>
+<%--                                <a href="#">이탈리아</a>--%>
+                                    <a href="/country?country=<c:out value="${europe.country}"/>">
+                                        <c:out value="${europe.country_name}">img/main1.jpg</c:out>
+                                    </a>
+                                </li>
+                            </c:forEach>
+<%--                            <li><a href="#">스페인</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">스페인</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">프랑스</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">체코</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">스위스</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">크로아티아</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">노르웨이</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">덴마크</a>--%>
+<%--                            </li>--%>
                         </ul>
                     </li>
                     <li><a href="#">아시아</a>
                         <ul class="sub_menu">
-                            <li><a href="#">일본</a>
-                            </li>
-                            <li><a href="#">몽골</a>
-                            </li>
-                            <li><a href="#">홍콩</a>
-                            </li>
-                            <li><a href="#">베트남</a>
-                            </li>
-                            <li><a href="#">싱가포르</a>
-                            </li>
-                            <li><a href="#">중국</a>
-                            </li>
-                            <li><a href="#">대만</a>
-                            </li>
-                            <li><a href="#">필리핀</a>
-                            </li>
-                            <li><a href="#">말레이시아</a>
-                            </li>
-                            <li><a href="#">방콕</a>
-                            </li>
-                            <li><a href="#">백두산</a>
-                            </li>
-                            <li><a href="#">라오스</a>
-                            </li>
-                            <li><a href="#">터키</a>
-                            </li>
+                            <c:forEach items="${asia}" var="asia" varStatus="status">
+                                <li>
+                                        <%--                                <a href="#">이탈리아</a>--%>
+                                    <a href="/country?country=<c:out value="${asia.country}"/>">
+                                        <c:out value="${asia.country_name}">img/main1.jpg</c:out>
+                                    </a>
+                                </li>
+                            </c:forEach>
+<%--                            <li><a href="#">일본</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">몽골</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">홍콩</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">베트남</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">싱가포르</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">중국</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">대만</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">필리핀</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">말레이시아</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">방콕</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">백두산</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">라오스</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">터키</a>--%>
+<%--                            </li>--%>
                         </ul>
                     </li>
                     <li><a href="#">북아메리카</a>
                         <ul class="sub_menu">
-                            <li><a href="#">미국</a>
-                            </li>
-                            <li><a href="#">캐나다</a>
-                            </li>
+                            <c:forEach items="${america}" var="america" varStatus="status">
+                                <li>
+                                        <%--                                <a href="#">이탈리아</a>--%>
+                                    <a href="/country?country=<c:out value="${america.country}"/>">
+                                        <c:out value="${america.country_name}">img/main1.jpg</c:out>
+                                    </a>
+                                </li>
+                            </c:forEach>
+<%--                            <li><a href="#">미국</a>--%>
+<%--                            </li>--%>
+<%--                            <li><a href="#">캐나다</a>--%>
+<%--                            </li>--%>
                         </ul>
                     </li>
                     <li><a href="#">태평양</a>
                         <ul class="sub_menu">
-                            <li><a href="#">사이판</a>
-                            </li>
+                            <c:forEach items="${pacific}" var="pacific" varStatus="status">
+                                <li>
+                                        <%--                                <a href="#">이탈리아</a>--%>
+                                    <a href="/country?country=<c:out value="${pacific.country}"/>">
+                                        <c:out value="${pacific.country_name}">img/main1.jpg</c:out>
+                                    </a>
+                                </li>
+                            </c:forEach>
+<%--                            <li><a href="#">사이판</a>--%>
+<%--                            </li>--%>
                         </ul>
                     </li>
                     <li><a href="#">오세아니아</a>
                         <ul class="sub_menu">
-                            <li><a href="#">호주</a>
-                            </li>
+                            <c:forEach items="${oceania}" var="oceania" varStatus="status">
+                                <li>
+                                        <%--                                <a href="#">이탈리아</a>--%>
+                                    <a href="/country?country=<c:out value="${oceania.country}"/>">
+                                        <c:out value="${oceania.country_name}">img/main1.jpg</c:out>
+                                    </a>
+                                </li>
+                            </c:forEach>
+<%--                            <li><a href="#">호주</a>--%>
+<%--                            </li>--%>
                         </ul>
                     </li>
                 </ul>

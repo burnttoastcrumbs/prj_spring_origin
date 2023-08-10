@@ -105,6 +105,20 @@ public class IndexController {
 		List<Detail_page> list14 = weekbest.slide(vo);
 		model.addAttribute("list14",list14);
 
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
 
 
 
@@ -122,6 +136,21 @@ public class IndexController {
 		List<Detail_page> list13 = weekbest.middleList(vo);
 		model.addAttribute("list13",list13);
 
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
+
 
 		return "usr/infra/index/middle";
 	}
@@ -133,6 +162,21 @@ public class IndexController {
 		Detail_page item = weekbest.detail(vo);
 		model.addAttribute("item",item);
 
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
+
 		return "usr/infra/index/detail";
 	}
 
@@ -142,26 +186,115 @@ public class IndexController {
 		Detail_page item = weekbest.purchase(vo);
 		model.addAttribute("item",item);
 
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
+
 		return "usr/infra/index/purchase";
 	}
 
 	@RequestMapping("/final_decision")
-	public String final_decision() {
+	public String final_decision(@ModelAttribute("vo") Detail_pageVo vo,Model model) {
+
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
 
 		return "usr/infra/index/final_decision";
 	}
 
 	@RequestMapping("/like")
-	public String like() {
+	public String like(@ModelAttribute("vo") Detail_pageVo vo,Model model) {
+
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
 
 		return "usr/infra/index/like";
 	}
 
 
 	@RequestMapping("/reservation")
-	public String reservation() {
+	public String reservation(@ModelAttribute("vo") Detail_pageVo vo,Model model) {
+
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
 
 		return "usr/infra/index/reservation";
+	}
+
+	@RequestMapping("/country")
+	public String country(@ModelAttribute("vo") Detail_pageVo vo,Model model) {
+
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
+
+		List<Detail_page> country = weekbest.country(vo);
+		model.addAttribute("country",country);
+
+		Detail_page country_name = weekbest.country_name(vo);
+		model.addAttribute("country_name",country_name);
+
+
+
+		return "usr/infra/index/country";
 	}
 
 	@RequestMapping("/cruise")
@@ -169,6 +302,21 @@ public class IndexController {
 
 		List<Detail_page> list15 = weekbest.cruise(vo);
 		model.addAttribute("list15",list15);
+
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
 
 		return "usr/infra/index/cruise";
 	}
@@ -179,6 +327,21 @@ public class IndexController {
 		List<Detail_page> list16 = weekbest.japan(vo);
 		model.addAttribute("list16",list16);
 
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
+
 		return "usr/infra/index/japan";
 	}
 
@@ -188,6 +351,21 @@ public class IndexController {
 		List<Detail_page> list17 = weekbest.mongolia(vo);
 		model.addAttribute("list17",list17);
 
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
+
 		return "usr/infra/index/mongolia";
 	}
 
@@ -196,6 +374,22 @@ public class IndexController {
 
 		List<Detail_page> list18 = weekbest.hongkong(vo);
 		model.addAttribute("list18",list18);
+
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
+
 		return "usr/infra/index/hongkong";
 	}
 

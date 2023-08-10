@@ -164,6 +164,41 @@ public class Detail_pageServiceImpl implements Detail_pageService{
 		return dao.hongkong(vo);
 	}
 
+	@Override
+	public List<Detail_page> europe(Detail_pageVo vo) {
+		return dao.europe(vo);
+	}
+
+	@Override
+	public List<Detail_page> asia(Detail_pageVo vo) {
+		return dao.asia(vo);
+	}
+
+	@Override
+	public List<Detail_page> america(Detail_pageVo vo) {
+		return dao.america(vo);
+	}
+
+	@Override
+	public List<Detail_page> pacific(Detail_pageVo vo) {
+		return dao.pacific(vo);
+	}
+
+	@Override
+	public List<Detail_page> oceania(Detail_pageVo vo) {
+		return dao.oceania(vo);
+	}
+
+	@Override
+	public List<Detail_page> country(Detail_pageVo vo) {
+		return dao.country(vo);
+	}
+
+	@Override
+	public Detail_page country_name(Detail_pageVo vo) {
+		return dao.country_name(vo);
+	}
+
 
 //	@Override
 //	public List<Detail_page> middleList(Detail_pageVo vo) {

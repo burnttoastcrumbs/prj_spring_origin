@@ -32,6 +32,8 @@ public class Detail_pageVo {
 	private String same;
 
 	private String slide;
+
+	private String country;
 // ----------
 	public Integer getShOption() {
 		return shOption;
@@ -68,8 +70,14 @@ public class Detail_pageVo {
 		this.slide = slide;
 	}
 
-	
-	
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
 	public int getThisPage() {
 		return thisPage;
 	}

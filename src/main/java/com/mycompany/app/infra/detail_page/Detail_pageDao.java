@@ -127,6 +127,34 @@ public class Detail_pageDao {
 		return sqlSession.selectList(namespace + ".hongkong", vo);
 	}
 
+
+	public List<Detail_page> europe(Detail_pageVo vo) {
+		return sqlSession.selectList(namespace + ".europe", vo);
+	}
+
+	public List<Detail_page> asia(Detail_pageVo vo) {
+		return sqlSession.selectList(namespace + ".asia", vo);
+	}
+
+	public List<Detail_page> america(Detail_pageVo vo) {
+		return sqlSession.selectList(namespace + ".america", vo);
+	}
+
+	public List<Detail_page> pacific(Detail_pageVo vo) {
+		return sqlSession.selectList(namespace + ".pacific", vo);
+	}
+
+	public List<Detail_page> oceania(Detail_pageVo vo) {
+		return sqlSession.selectList(namespace + ".oceania", vo);
+	}
+
+	public List<Detail_page> country(Detail_pageVo vo) {
+		return sqlSession.selectList(namespace + ".country", vo);
+	}
+
+	public Detail_page country_name(Detail_pageVo vo) {
+		return sqlSession.selectOne(namespace + ".country_name", vo);
+	}
 	
 	public int update(Detail_page dto) {
 		return sqlSession.update(namespace + ".update", dto);

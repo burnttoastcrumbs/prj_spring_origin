@@ -58,6 +58,20 @@ public interface Detail_pageService {
 
 	public List<Detail_page> hongkong(Detail_pageVo vo);
 
+	public List<Detail_page> europe(Detail_pageVo vo);
+
+	public List<Detail_page> asia(Detail_pageVo vo);
+
+	public List<Detail_page> america(Detail_pageVo vo);
+
+	public List<Detail_page> pacific(Detail_pageVo vo);
+
+	public List<Detail_page> oceania(Detail_pageVo vo);
+
+	public List<Detail_page> country(Detail_pageVo vo);
+
+	public Detail_page country_name(Detail_pageVo vo);
+
 	//	public int uelete(Order dto);
 
 	

@@ -471,8 +471,165 @@
 		  AND defNy = 1
 	</select>
 
+	<select id="europe" resultMap="resultMapObj">
+		SELECT
+			MIN(seq) as seq,
+			MIN(same) as same,
+			MIN(theme_name) as theme_name,
+			MIN(detailPage_title) as detailPage_title,
+			MIN(detailPage_Detail) as detailPage_Detail,
+			MIN(layover) as layover,
+			MIN(nights) as nights,
+			MIN(days) as days,
+			MIN(adult_price) as adult_price,
+			MIN(country_name) as country_name,
+			country,
+			MIN(detailPage_img) as detailPage_img
+		FROM
+			detail_page
+		WHERE
+			defNy = 1
+		  and country between 1 and 8
+		GROUP BY
+			country
+		ORDER BY
+			country;
+	</select>
+
+	<select id="asia" resultMap="resultMapObj">
+		SELECT
+			MIN(seq) as seq,
+			MIN(same) as same,
+			MIN(theme_name) as theme_name,
+			MIN(detailPage_title) as detailPage_title,
+			MIN(detailPage_Detail) as detailPage_Detail,
+			MIN(layover) as layover,
+			MIN(nights) as nights,
+			MIN(days) as days,
+			MIN(adult_price) as adult_price,
+			MIN(country_name) as country_name,
+			country,
+			MIN(detailPage_img) as detailPage_img
+		FROM
+			detail_page
+		WHERE
+			defNy = 1
+		  and country between 9 and 21
+		GROUP BY
+			country
+		ORDER BY
+			country;
+	</select>
+
+	<select id="america" resultMap="resultMapObj">
+		SELECT
+			MIN(seq) as seq,
+			MIN(same) as same,
+			MIN(theme_name) as theme_name,
+			MIN(detailPage_title) as detailPage_title,
+			MIN(detailPage_Detail) as detailPage_Detail,
+			MIN(layover) as layover,
+			MIN(nights) as nights,
+			MIN(days) as days,
+			MIN(adult_price) as adult_price,
+			MIN(country_name) as country_name,
+			country,
+			MIN(detailPage_img) as detailPage_img
+		FROM
+			detail_page
+		WHERE
+			defNy = 1
+		  and country between 22 and 23
+		GROUP BY
+			country
+		ORDER BY
+			country;
+	</select>
+
+	<select id="pacific" resultMap="resultMapObj">
+		SELECT
+			MIN(seq) as seq,
+			MIN(same) as same,
+			MIN(theme_name) as theme_name,
+			MIN(detailPage_title) as detailPage_title,
+			MIN(detailPage_Detail) as detailPage_Detail,
+			MIN(layover) as layover,
+			MIN(nights) as nights,
+			MIN(days) as days,
+			MIN(adult_price) as adult_price,
+			MIN(country_name) as country_name,
+			country,
+			MIN(detailPage_img) as detailPage_img
+		FROM
+			detail_page
+		WHERE
+			defNy = 1
+		  and country =24
+		GROUP BY
+			country
+		ORDER BY
+			country;
+	</select>
+
+	<select id="oceania" resultMap="resultMapObj">
+		SELECT
+			MIN(seq) as seq,
+			MIN(same) as same,
+			MIN(theme_name) as theme_name,
+			MIN(detailPage_title) as detailPage_title,
+			MIN(detailPage_Detail) as detailPage_Detail,
+			MIN(layover) as layover,
+			MIN(nights) as nights,
+			MIN(days) as days,
+			MIN(adult_price) as adult_price,
+			MIN(country_name) as country_name,
+			country,
+			MIN(detailPage_img) as detailPage_img
+		FROM
+			detail_page
+		WHERE
+			defNy = 1
+		  and country =25
+		GROUP BY
+			country
+		ORDER BY
+			country;
+	</select>
 
 
+	<select id="country" resultMap="resultMapObj">
+		SELECT
+			seq,
+			same,
+			theme_name,
+			detailPage_title,
+			detailPage_Detail,
+			layover,
+			nights,
+			days,
+			adult_price,
+			country_name,
+			country,
+			detailPage_img
+		FROM
+			detail_page
+		WHERE
+			1=1
+		  and country = ${country}
+		  and defNy = 1
+	</select>
+
+	<select id="country_name" resultMap="resultMapObj">
+		SELECT
+			seq,
+			country_name
+		FROM
+			detail_page
+		WHERE
+			country = ${country}
+		  AND defNy = 1
+			LIMIT 1;
+	</select>
 
  	
  <update id="update" >
