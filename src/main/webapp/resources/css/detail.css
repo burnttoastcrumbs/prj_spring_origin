@@ -147,9 +147,9 @@ body {font-family: 'Noto Sans KR', sans-serif;}
 #pay_button li:first-of-type {width: 76%;}
 #pay_button li:last-of-type {width: 20%;}
 #pay_button li:first-of-type button {width: 100%; height: 100%; background-color: #5e99cb; color:white; border-radius: 7px; font-size: 20px; cursor:pointer;}
-.like {width: 100%; height: 100%; background-color: white; color: #666; border-radius: 7px; font-size: 20px; border: #ddd 1px solid; box-sizing: border-box; cursor:pointer;}
-.like:hover {border: #666 1px solid; box-sizing: border-box;}
-.like i:last-child {color:rgb(94, 43, 184); display: none;}
+#like {width: 100%; height: 100%; background-color: white; color: #666; border-radius: 7px; font-size: 20px; border: #ddd 1px solid; box-sizing: border-box; cursor:pointer;}
+#like:hover {border: #666 1px solid; box-sizing: border-box;}
+#like i:last-child {color:rgb(94, 43, 184); display: none;}
 
 .nothing {display: none;}
 .readyToStart {}

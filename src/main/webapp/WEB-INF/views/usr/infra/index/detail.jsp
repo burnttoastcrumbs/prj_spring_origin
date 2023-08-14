@@ -230,10 +230,10 @@
             <p>인원선택</p>
             <ul id="count">
                 <li>
-                        <span>
-                            <p>성인</p>
-                            <p><span class="adult_price"><fmt:formatNumber type="number" maxFractionDigits="3" value="${item.adult_price}" /></span>원</p>
-                        </span>
+                    <span>
+                        <p>성인</p>
+                        <p><span class="adult_price"><fmt:formatNumber type="number" maxFractionDigits="3" value="${item.adult_price}" /></span>원</p>
+                    </span>
                     <div class="count_box">
                         <div class="count-wrap _count">
                             <button type="button" class="minus">-</button>
@@ -241,13 +241,12 @@
                             <button type="button" class="plus">+</button>
                         </div>
                     </div>
-
                 </li>
                 <li>
-                        <span>
-                            <p>아동</p>
-                            <p><span class="child_price"><fmt:formatNumber type="number" maxFractionDigits="3" value="${item.child_price}" /></span>원</p>
-                        </span>
+                    <span>
+                        <p>아동</p>
+                        <p><span class="child_price"><fmt:formatNumber type="number" maxFractionDigits="3" value="${item.child_price}" /></span>원</p>
+                    </span>
                     <div class="count_box">
                         <div class="count-wrap _count">
                             <button type="button" class="minus">-</button>
@@ -255,13 +254,12 @@
                             <button type="button" class="plus">+</button>
                         </div>
                     </div>
-
                 </li>
                 <li>
-                        <span>
-                            <p>유아</p>
-                            <p><span class="toddler_price"><fmt:formatNumber type="number" maxFractionDigits="3" value="${item.toddler_price}" /></span>원</p>
-                        </span>
+                    <span>
+                        <p>유아</p>
+                        <p><span class="toddler_price"><fmt:formatNumber type="number" maxFractionDigits="3" value="${item.toddler_price}" /></span>원</p>
+                    </span>
                     <div class="count_box">
                         <div class="count-wrap _count">
                             <button type="button" class="minus">-</button>
@@ -269,7 +267,6 @@
                             <button type="button" class="plus">+</button>
                         </div>
                     </div>
-
                 </li>
             </ul>
             <span>총 금액</span>
