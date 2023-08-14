@@ -41,9 +41,18 @@ $(function(){
 
 
     $("#pay_button li:last-child button").click(function(){
-        $(this).children("i:first-child").css("display","none"),
-            $(this).children("i:last-child").css("display","block")
-        // ,alert("상품을 찜하셨습니다.");
+        var $firstHeart = $(this).children("i:first-child");
+        var $secondHeart = $(this).children("i:last-child");
+
+        if ($secondHeart.css("display") === "block") {
+            $firstHeart.css("display", "block");
+            $secondHeart.css("display", "none");
+            alert("sf");
+        } else {
+            $firstHeart.css("display", "none");
+            $secondHeart.css("display", "block");
+            alert("sdfghf");
+        }
     });
 
 

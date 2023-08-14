@@ -22,7 +22,9 @@
 		phoneNumber,
 		password,
 		gender,
-		dob
+		year,
+		month,
+		date
 	</sql>
 
 	<select id="selectList" resultMap="resultMapObj">
@@ -85,14 +87,18 @@
 			phoneNumber,
 			password,
 			gender,
-			dob
+			year,
+		    month,
+		    date
 		) VALUES (
 			#{id_Email},
 			#{name},
 			#{phoneNumber},
 			#{password},
 			#{gender},
-			#{dob}
+			#{year},
+			#{month},
+			#{date}
 		)
 
 	</insert>

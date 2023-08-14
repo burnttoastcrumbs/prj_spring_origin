@@ -47,14 +47,21 @@
           </div>
           <div class="col-md-6">
               <label for="validationCustom01" class="form-label">성별</label>
-             <input type="text" class="form-control" id="validationCustom01" name="gender" required>
+              <div class="gender_box">
+                  <input type="radio" name="gender" id="validationCustom01" value="1" required name="gender" checked>남성
+                  <input type="radio" name="gender" id="validationCustom01" value="2" required name="gender" checked>여성
+              </div>
               <div class="invalid-feedback">
                   성별을 선택해주세요.
               </div>
           </div>
           <div class="col-md-6">
               <label for="validationCustom01" class="form-label">생년월일</label>
-              <input type="date" class="form-control" id="validationCustom01" name="dob" required>
+              <div class="dob_box">
+                  <input type="text" class="form-control dob" id="validationCustom01" value="" name="year" required placeholder="년">
+                  <input type="text" class="form-control dob" id="validationCustom01" value="" name="month" required placeholder="월">
+                  <input type="text" class="form-control dob" id="validationCustom01" value="" name="date" required placeholder="일">
+              </div>
               <div class="invalid-feedback">
                   생년월일을 적어주세요.
               </div>

@@ -16,7 +16,7 @@ body {font-family: 'Noto Sans KR', sans-serif;}
 #header1 ul a:hover {color: rgb(94, 43, 184); cursor: pointer;}
 #header2-1 {width: 600px; min-width: 600px; height: 100%; display: flex; align-items: center; justify-content: space-between; position: relative;}
 #header2-1 img {width: 150px; height: 36px; cursor: pointer;}
-#header2-1 input {height :44px; border-radius: 22px; border: 2px solid black; box-sizing: border-box; width: 420px; padding-left: 15px; font-size: 15px;}
+#header2-1 input {height :44px; border-radius: 22px; border: 2px solid black; box-sizing: border-box; width: 420px; padding-left: 15px; padding-right : 50px; font-size: 15px;}
 #header2-1 input::placeholder {color: darkgray;}
 #header2-1 i {position: absolute; right:20px; font-size: 20px;}
 #header2-2 {width: 170px; height: 100%; display: flex;}

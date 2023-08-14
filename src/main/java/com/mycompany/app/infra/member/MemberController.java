@@ -106,7 +106,7 @@ public class MemberController {
 		System.out.println("memberInsert");
 		service.insert(dto);
 
-		return "redirect:/main";
+		return "redirect:/signUpDone";
 
 	}
 

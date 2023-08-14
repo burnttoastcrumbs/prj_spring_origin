@@ -87,45 +87,45 @@
                 <div id="calandar_select">
                     <span>총 <span class="product_num"></span>개</span>
                 </div>
-<%--                <ul>--%>
-<%--                    <c:forEach items="${list13}" var="ml" varStatus="status">--%>
-<%--                        <li>--%>
-<%--                            <div class="select_info">--%>
-<%--                                <c:choose>--%>
-<%--                                    <c:when test="${empty ml.theme_name}">--%>
-<%--                                        <div class="nothing"></div>--%>
-<%--                                    </c:when>--%>
-<%--                                    <c:otherwise>--%>
-<%--                                        <div class="theme_name"><c:out value="${ml.theme_name}">크루즈</c:out></div>--%>
-<%--                                    </c:otherwise>--%>
-<%--                                </c:choose>--%>
-<%--                                    &lt;%&ndash;                            <div class="theme_name"><c:out value="${ml.theme_name}">크루즈</c:out></div>&ndash;%&gt;--%>
-<%--                                <p class="detailPage_title"><c:out value="${ml.detailPage_title}">로마와 동부 지중해(이탈리아/그리스/몰타) 크루즈 10일 #MSC 디비나호 #발코니 선실 #로마 벤츠투어</c:out></p>--%>
-<%--                                <p>--%>
-<%--                                    <img src="/resources/<c:out value="${ml.flightLogoImg}">img/KE.png</c:out>" alt="" class="flightLogoImg">--%>
-<%--                                    <span class="flight_name"><c:out value="${ml.flight_name}">대한항공</c:out></span>--%>
-<%--                                </p>--%>
-<%--                                <p>--%>
-<%--                                    <i class="fa-solid fa-calendar-days"></i>--%>
-<%--                                    <span>--%>
-<%--                                        <span class="f_startMonth"><c:out value="${ml.f_startMonth}">8</c:out></span>/<span class="f_startDate"><c:out value="${ml.f_startDate}">24</c:out></span>(<span class="f_startWhatDay"><c:out value="${ml.f_startWhatDay}">목</c:out></span>) <span class="f_startHour"><c:out value="${ml.f_startHour}">14</c:out></span>:<span class="F_startMinute"><c:out value="${ml.f_startMinute}">15</c:out></span>--%>
-<%--                                    </span>--%>
-<%--                                    <i class="fa-solid fa-arrow-right"></i>--%>
-<%--                                    <span>--%>
-<%--                                        <span class="L_arriveMonth"><c:out value="${ml.l_arriveMonth}">9</c:out></span>/<span class="L_arriveDate"><c:out value="${ml.l_arriveDate}">2</c:out></span>(<span class="L_arriveWhatDay"><c:out value="${ml.l_arriveWhatDay}">토</c:out></span>) <span class="L_arriveHour"><c:out value="${ml.l_arriveHour}">15</c:out></span>:<span class="L_arriveMinute"><c:out value="${ml.l_arriveMinute}">50</c:out></span>--%>
-<%--                                    </span>--%>
-<%--                                    <span><span class="nights"><c:out value="${ml.nights}">8</c:out></span>박 <span class="days"><c:out value="${ml.days}">10</c:out></span>일</span>--%>
-<%--                                </p>--%>
-<%--                            </div>--%>
-<%--                            <div id="select_price">--%>
-<%--                                <p><span class="adult_price"><fmt:formatNumber type="number" maxFractionDigits="3" value="${ml.adult_price}" /></span>원</p>--%>
-<%--                                <a href="/detail?seq=<c:out value="${ml.seq}"/>">--%>
-<%--                                    <button>상세일정보기</button>--%>
-<%--                                </a>--%>
-<%--                            </div>--%>
-<%--                        </li>--%>
-<%--                    </c:forEach>--%>
-<%--                </ul>--%>
+                <ul>
+                    <c:forEach items="${list13}" var="ml" varStatus="status">
+                        <li>
+                            <div class="select_info">
+                                <c:choose>
+                                    <c:when test="${empty ml.theme_name}">
+                                        <div class="nothing"></div>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <div class="theme_name"><c:out value="${ml.theme_name}">크루즈</c:out></div>
+                                    </c:otherwise>
+                                </c:choose>
+                                    <%--                            <div class="theme_name"><c:out value="${ml.theme_name}">크루즈</c:out></div>--%>
+                                <p class="detailPage_title"><c:out value="${ml.detailPage_title}">로마와 동부 지중해(이탈리아/그리스/몰타) 크루즈 10일 #MSC 디비나호 #발코니 선실 #로마 벤츠투어</c:out></p>
+                                <p>
+                                    <img src="/resources/<c:out value="${ml.flightLogoImg}">img/KE.png</c:out>" alt="" class="flightLogoImg">
+                                    <span class="flight_name"><c:out value="${ml.flight_name}">대한항공</c:out></span>
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span>
+                                        <span class="f_startMonth"><c:out value="${ml.f_startMonth}">8</c:out></span>/<span class="f_startDate"><c:out value="${ml.f_startDate}">24</c:out></span>(<span class="f_startWhatDay"><c:out value="${ml.f_startWhatDay}">목</c:out></span>) <span class="f_startHour"><c:out value="${ml.f_startHour}">14</c:out></span>:<span class="F_startMinute"><c:out value="${ml.f_startMinute}">15</c:out></span>
+                                    </span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <span>
+                                        <span class="L_arriveMonth"><c:out value="${ml.l_arriveMonth}">9</c:out></span>/<span class="L_arriveDate"><c:out value="${ml.l_arriveDate}">2</c:out></span>(<span class="L_arriveWhatDay"><c:out value="${ml.l_arriveWhatDay}">토</c:out></span>) <span class="L_arriveHour"><c:out value="${ml.l_arriveHour}">15</c:out></span>:<span class="L_arriveMinute"><c:out value="${ml.l_arriveMinute}">50</c:out></span>
+                                    </span>
+                                    <span><span class="nights"><c:out value="${ml.nights}">8</c:out></span>박 <span class="days"><c:out value="${ml.days}">10</c:out></span>일</span>
+                                </p>
+                            </div>
+                            <div id="select_price">
+                                <p><span class="adult_price"><fmt:formatNumber type="number" maxFractionDigits="3" value="${ml.adult_price}" /></span>원</p>
+                                <a href="/detail?seq=<c:out value="${ml.seq}"/>">
+                                    <button>상세일정보기</button>
+                                </a>
+                            </div>
+                        </li>
+                    </c:forEach>
+                </ul>
                 <button>
                     <span>접기</span>
                     <i class="fa-solid fa-angle-up"></i>
