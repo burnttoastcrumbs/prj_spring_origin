@@ -47,11 +47,9 @@ $(function(){
         if ($secondHeart.css("display") === "block") {
             $firstHeart.css("display", "block");
             $secondHeart.css("display", "none");
-            alert("sf");
         } else {
             $firstHeart.css("display", "none");
             $secondHeart.css("display", "block");
-            alert("sdfghf");
         }
     });
 

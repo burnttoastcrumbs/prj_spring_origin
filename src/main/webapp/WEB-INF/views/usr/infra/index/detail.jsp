@@ -16,7 +16,7 @@
     <title>하나투어 : 꿈꾸는 대로, 펼쳐지다</title>
     <link rel="stylesheet" href="/resources/css/detail.css">
     <script src="/resources/js/jquery-3.6.4.min.js"></script>
-    <script src="/resources/js/detail.js"></script>
+    <script src="/resources/js/detail2.js"></script>
     <script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
