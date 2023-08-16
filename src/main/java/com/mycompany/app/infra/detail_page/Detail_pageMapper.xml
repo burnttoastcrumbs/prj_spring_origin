@@ -475,16 +475,8 @@
 		SELECT
 			MIN(seq) as seq,
 			MIN(same) as same,
-			MIN(theme_name) as theme_name,
-			MIN(detailPage_title) as detailPage_title,
-			MIN(detailPage_Detail) as detailPage_Detail,
-			MIN(layover) as layover,
-			MIN(nights) as nights,
-			MIN(days) as days,
-			MIN(adult_price) as adult_price,
 			MIN(country_name) as country_name,
-			country,
-			MIN(detailPage_img) as detailPage_img
+			country
 		FROM
 			detail_page
 		WHERE
@@ -500,16 +492,8 @@
 		SELECT
 			MIN(seq) as seq,
 			MIN(same) as same,
-			MIN(theme_name) as theme_name,
-			MIN(detailPage_title) as detailPage_title,
-			MIN(detailPage_Detail) as detailPage_Detail,
-			MIN(layover) as layover,
-			MIN(nights) as nights,
-			MIN(days) as days,
-			MIN(adult_price) as adult_price,
 			MIN(country_name) as country_name,
-			country,
-			MIN(detailPage_img) as detailPage_img
+			country
 		FROM
 			detail_page
 		WHERE
@@ -525,16 +509,8 @@
 		SELECT
 			MIN(seq) as seq,
 			MIN(same) as same,
-			MIN(theme_name) as theme_name,
-			MIN(detailPage_title) as detailPage_title,
-			MIN(detailPage_Detail) as detailPage_Detail,
-			MIN(layover) as layover,
-			MIN(nights) as nights,
-			MIN(days) as days,
-			MIN(adult_price) as adult_price,
 			MIN(country_name) as country_name,
-			country,
-			MIN(detailPage_img) as detailPage_img
+			country
 		FROM
 			detail_page
 		WHERE
@@ -550,16 +526,8 @@
 		SELECT
 			MIN(seq) as seq,
 			MIN(same) as same,
-			MIN(theme_name) as theme_name,
-			MIN(detailPage_title) as detailPage_title,
-			MIN(detailPage_Detail) as detailPage_Detail,
-			MIN(layover) as layover,
-			MIN(nights) as nights,
-			MIN(days) as days,
-			MIN(adult_price) as adult_price,
 			MIN(country_name) as country_name,
-			country,
-			MIN(detailPage_img) as detailPage_img
+			country
 		FROM
 			detail_page
 		WHERE
@@ -575,16 +543,8 @@
 		SELECT
 			MIN(seq) as seq,
 			MIN(same) as same,
-			MIN(theme_name) as theme_name,
-			MIN(detailPage_title) as detailPage_title,
-			MIN(detailPage_Detail) as detailPage_Detail,
-			MIN(layover) as layover,
-			MIN(nights) as nights,
-			MIN(days) as days,
-			MIN(adult_price) as adult_price,
 			MIN(country_name) as country_name,
-			country,
-			MIN(detailPage_img) as detailPage_img
+			country
 		FROM
 			detail_page
 		WHERE
@@ -629,6 +589,30 @@
 			country = ${country}
 		  AND defNy = 1
 			LIMIT 1;
+	</select>
+
+	<select id="nationList" resultMap="resultMapObj">
+		SELECT
+			seq,
+			same,
+			theme_name,
+			detailPage_title,
+			detailPage_Detail,
+			layover,
+			nights,
+			days,
+			adult_price,
+			country_name,
+			country,
+			detailPage_img
+		FROM
+			detail_page
+		WHERE
+			1=1
+		and
+		    country = ${country}
+		and
+		    same = ${same}
 	</select>
 
  	

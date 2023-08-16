@@ -105,7 +105,7 @@
                             <c:forEach items="${europe}" var="europe" varStatus="status">
                                 <li>
 <%--                                <a href="#">이탈리아</a>--%>
-                                    <a href="/country?country=<c:out value="${europe.country}"/>">
+                                    <a href="/nation?country=<c:out value="${europe.country}"/>">
                                         <c:out value="${europe.country_name}">img/main1.jpg</c:out>
                                     </a>
                                 </li>
@@ -133,7 +133,7 @@
                             <c:forEach items="${asia}" var="asia" varStatus="status">
                                 <li>
                                         <%--                                <a href="#">이탈리아</a>--%>
-                                    <a href="/country?country=<c:out value="${asia.country}"/>">
+                                    <a href="/nation?country=<c:out value="${asia.country}"/>">
                                         <c:out value="${asia.country_name}">img/main1.jpg</c:out>
                                     </a>
                                 </li>
@@ -171,7 +171,7 @@
                             <c:forEach items="${america}" var="america" varStatus="status">
                                 <li>
                                         <%--                                <a href="#">이탈리아</a>--%>
-                                    <a href="/country?country=<c:out value="${america.country}"/>">
+                                    <a href="/nation?country=<c:out value="${america.country}"/>">
                                         <c:out value="${america.country_name}">img/main1.jpg</c:out>
                                     </a>
                                 </li>
@@ -187,7 +187,7 @@
                             <c:forEach items="${pacific}" var="pacific" varStatus="status">
                                 <li>
                                         <%--                                <a href="#">이탈리아</a>--%>
-                                    <a href="/country?country=<c:out value="${pacific.country}"/>">
+                                    <a href="/nation?country=<c:out value="${pacific.country}"/>">
                                         <c:out value="${pacific.country_name}">img/main1.jpg</c:out>
                                     </a>
                                 </li>
@@ -201,7 +201,7 @@
                             <c:forEach items="${oceania}" var="oceania" varStatus="status">
                                 <li>
                                         <%--                                <a href="#">이탈리아</a>--%>
-                                    <a href="/country?country=<c:out value="${oceania.country}"/>">
+                                    <a href="/nation?country=<c:out value="${oceania.country}"/>">
                                         <c:out value="${oceania.country_name}">img/main1.jpg</c:out>
                                     </a>
                                 </li>
@@ -210,6 +210,93 @@
 <%--                            </li>--%>
                         </ul>
                     </li>
+
+
+
+
+<%--                    <c:choose>--%>
+<%--                        <c:when test="${country >= 1 && country <= 8}">--%>
+<%--                            <li><a href="#">유럽</a>--%>
+<%--                                <ul class="sub_menu">--%>
+<%--                                    <c:forEach items="${europe}" var="europe" varStatus="status">--%>
+<%--                                        <li>--%>
+<%--                                            <a href="/country?country=<c:out value="${europe.country}"/>">--%>
+<%--                                                <c:out value="${europe.country_name}">img/main1.jpg</c:out>--%>
+<%--                                            </a>--%>
+<%--                                        </li>--%>
+<%--                                    </c:forEach>--%>
+<%--                                </ul>--%>
+<%--                            </li>--%>
+<%--                        </c:when>--%>
+
+<%--                        <c:when test="${country >= 9 && country <= 21}">--%>
+<%--                            <li><a href="#">아시아</a>--%>
+<%--                                <ul class="sub_menu">--%>
+<%--                                    <c:forEach items="${europe}" var="asia" varStatus="status">--%>
+<%--                                        <li>--%>
+<%--                                                &lt;%&ndash;                                <a href="#">이탈리아</a>&ndash;%&gt;--%>
+<%--                                            <a href="/country?country=<c:out value="${asia.country}"/>">--%>
+<%--                                                <c:out value="${asia.country_name}">img/main1.jpg</c:out>--%>
+<%--                                            </a>--%>
+<%--                                        </li>--%>
+<%--                                    </c:forEach>--%>
+<%--                                        &lt;%&ndash;                            <li><a href="#">호주</a>&ndash;%&gt;--%>
+<%--                                        &lt;%&ndash;                            </li>&ndash;%&gt;--%>
+<%--                                </ul>--%>
+<%--                            </li>--%>
+<%--                        </c:when>--%>
+
+<%--                        <c:when test="${country >= 22 && country <= 23}">--%>
+<%--                            <li><a href="#">북아메리카</a>--%>
+<%--                                <ul class="sub_menu">--%>
+<%--                                    <c:forEach items="${europe}" var="america" varStatus="status">--%>
+<%--                                        <li>--%>
+<%--                                                &lt;%&ndash;                                <a href="#">이탈리아</a>&ndash;%&gt;--%>
+<%--                                            <a href="/country?country=<c:out value="${america.country}"/>">--%>
+<%--                                                <c:out value="${america.country_name}">img/main1.jpg</c:out>--%>
+<%--                                            </a>--%>
+<%--                                        </li>--%>
+<%--                                    </c:forEach>--%>
+<%--                                        &lt;%&ndash;                            <li><a href="#">호주</a>&ndash;%&gt;--%>
+<%--                                        &lt;%&ndash;                            </li>&ndash;%&gt;--%>
+<%--                                </ul>--%>
+<%--                            </li>--%>
+<%--                        </c:when>--%>
+
+<%--                        <c:when test="${country == 24}">--%>
+<%--                            <li><a href="#">태평양</a>--%>
+<%--                                <ul class="sub_menu">--%>
+<%--                                    <c:forEach items="${europe}" var="pacific" varStatus="status">--%>
+<%--                                        <li>--%>
+<%--                                                &lt;%&ndash;                                <a href="#">이탈리아</a>&ndash;%&gt;--%>
+<%--                                            <a href="/country?country=<c:out value="${pacific.country}"/>">--%>
+<%--                                                <c:out value="${pacific.country_name}">img/main1.jpg</c:out>--%>
+<%--                                            </a>--%>
+<%--                                        </li>--%>
+<%--                                    </c:forEach>--%>
+<%--                                        &lt;%&ndash;                            <li><a href="#">호주</a>&ndash;%&gt;--%>
+<%--                                        &lt;%&ndash;                            </li>&ndash;%&gt;--%>
+<%--                                </ul>--%>
+<%--                            </li>--%>
+<%--                        </c:when>--%>
+
+<%--                        <c:when test="${country == 25}">--%>
+<%--                            <li><a href="#">오세아니아</a>--%>
+<%--                                <ul class="sub_menu">--%>
+<%--                                    <c:forEach items="${europe}" var="oceania" varStatus="status">--%>
+<%--                                        <li>--%>
+<%--                                                &lt;%&ndash;                                <a href="#">이탈리아</a>&ndash;%&gt;--%>
+<%--                                            <a href="/country?country=<c:out value="${oceania.country}"/>">--%>
+<%--                                                <c:out value="${oceania.country_name}">img/main1.jpg</c:out>--%>
+<%--                                            </a>--%>
+<%--                                        </li>--%>
+<%--                                    </c:forEach>--%>
+<%--                                        &lt;%&ndash;                            <li><a href="#">호주</a>&ndash;%&gt;--%>
+<%--                                        &lt;%&ndash;                            </li>&ndash;%&gt;--%>
+<%--                                </ul>--%>
+<%--                            </li>--%>
+<%--                        </c:when>--%>
+<%--                    </c:choose>--%>
                 </ul>
             </div>
         </div>
@@ -229,7 +316,7 @@
                 if(response.rt == "success") {
                     location.href = "/main";
                 } else {
-                    alert("로그아웃에 실패했습니다.");
+                    alert("아이디나 비밀번호가 맞지 않습니다.");
                 }
             }
             ,error : function(jqXHR, textStatus, errorThrown){

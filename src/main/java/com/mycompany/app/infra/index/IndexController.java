@@ -268,8 +268,8 @@ public class IndexController {
 		return "usr/infra/index/reservation";
 	}
 
-	@RequestMapping("/country")
-	public String country(@ModelAttribute("vo") Detail_pageVo vo,Model model) {
+	@RequestMapping("/nation")
+	public String test2(@ModelAttribute("vo") Detail_pageVo vo,Model model) {
 
 		List<Detail_page> europe = weekbest.europe(vo);
 		model.addAttribute("europe",europe);
@@ -286,15 +286,23 @@ public class IndexController {
 		List<Detail_page> oceania = weekbest.oceania(vo);
 		model.addAttribute("oceania",oceania);
 
-		List<Detail_page> country = weekbest.country(vo);
-		model.addAttribute("country",country);
-
 		Detail_page country_name = weekbest.country_name(vo);
 		model.addAttribute("country_name",country_name);
 
+		List<Detail_page> country = weekbest.country(vo);
+		model.addAttribute("country",country);
+
+//		List<Detail_page> list13 = weekbest.middleList(vo);
+//		model.addAttribute("list13",list13);
+
+		List<Detail_page> nationList = weekbest.country(vo);
+		model.addAttribute("nationList",nationList);
 
 
-		return "usr/infra/index/country";
+
+
+
+		return "usr/infra/index/nation";
 	}
 
 	@RequestMapping("/cruise")

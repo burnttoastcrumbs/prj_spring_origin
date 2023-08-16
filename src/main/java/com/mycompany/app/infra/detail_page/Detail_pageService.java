@@ -44,6 +44,8 @@ public interface Detail_pageService {
 
 	public List<Detail_page> middleList(Detail_pageVo vo);
 
+	public List<Detail_page> nationList(Detail_pageVo vo);
+
 	public Detail_page detail(Detail_pageVo vo);
 
 	public Detail_page purchase(Detail_pageVo vo);

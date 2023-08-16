@@ -105,8 +105,8 @@
                             <p>
                                 <i class="fa-solid fa-calendar-days"></i>
                                 <span>
-                                        <span class="f_startMonth"><c:out value="${ml.f_startMonth}">8</c:out></span>/<span class="f_startDate"><c:out value="${ml.f_startDate}">24</c:out></span>(<span class="f_startWhatDay"><c:out value="${ml.f_startWhatDay}">목</c:out></span>) <span class="f_startHour"><c:out value="${ml.f_startHour}">14</c:out></span>:<span class="F_startMinute"><c:out value="${ml.f_startMinute}">15</c:out></span>
-                                    </span>
+                                    <span class="f_startMonth"><c:out value="${ml.f_startMonth}">8</c:out></span>/<span class="f_startDate"><c:out value="${ml.f_startDate}">24</c:out></span>(<span class="f_startWhatDay"><c:out value="${ml.f_startWhatDay}">목</c:out></span>) <span class="f_startHour"><c:out value="${ml.f_startHour}">14</c:out></span>:<span class="F_startMinute"><c:out value="${ml.f_startMinute}">15</c:out></span>
+                                </span>
                                 <i class="fa-solid fa-arrow-right"></i>
                                 <span>
                                         <span class="L_arriveMonth"><c:out value="${ml.l_arriveMonth}">9</c:out></span>/<span class="L_arriveDate"><c:out value="${ml.l_arriveDate}">2</c:out></span>(<span class="L_arriveWhatDay"><c:out value="${ml.l_arriveWhatDay}">토</c:out></span>) <span class="L_arriveHour"><c:out value="${ml.l_arriveHour}">15</c:out></span>:<span class="L_arriveMinute"><c:out value="${ml.l_arriveMinute}">50</c:out></span>

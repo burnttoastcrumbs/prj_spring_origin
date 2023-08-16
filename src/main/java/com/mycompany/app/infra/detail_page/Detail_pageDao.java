@@ -155,6 +155,10 @@ public class Detail_pageDao {
 	public Detail_page country_name(Detail_pageVo vo) {
 		return sqlSession.selectOne(namespace + ".country_name", vo);
 	}
+
+	public List<Detail_page> nationList(Detail_pageVo vo) {
+		return sqlSession.selectList(namespace + ".nationList", vo);
+	}
 	
 	public int update(Detail_page dto) {
 		return sqlSession.update(namespace + ".update", dto);
