@@ -151,7 +151,9 @@
 								<input type="text"  name="password" id="password" placeholder="password"  value="<c:out value="${item.password}"/>">
 								<input type="text"  name="phoneNumber" id="phoneNumber" placeholder="phoneNumber"  value="<c:out value="${item.phoneNumber}"/>">
 								<input type="text"  name="gender" id="gender" placeholder="gender"  value="<c:out value="${item.gender}"/>">
-								<input type="text"  name="dob" id="dob" placeholder="dob"  value="<c:out value="${item.dob}"/>">
+								<input type="text"  name="dob" id="dob" placeholder="dob"  value="<c:out value="${item.year}"/>">
+								<input type="text"  name="dob" id="dob" placeholder="dob"  value="<c:out value="${item.month}"/>">
+								<input type="text"  name="dob" id="dob" placeholder="dob"  value="<c:out value="${item.date}"/>">
 								<br>
 								<button type="button" class="btn btn-primary" id="btnDelete">삭제</button>
 								<!-- <button type="button" class="btn btn-primary" id="btnInsert">인서트</button> -->

@@ -106,7 +106,9 @@
 											<th scope="col">phoneNumber</th>
 											<th scope="col">password</th>
 											<th scope="col">gender</th>
-											<th scope="col">dob</th>
+											<th scope="col">year</th>
+											<th scope="col">month</th>
+											<th scope="col">date</th>
 										</tr>
 									</thead>
 
@@ -143,10 +145,10 @@
 														<td><c:out value="${list.phoneNumber}"></c:out></td>
 														<td><c:out value="${list.password}"></c:out></td>
 														<td><c:out value="${list.gender}"></c:out></td>
-														<td><c:out value="${list.dob}"></c:out></td>
-
+														<td><c:out value="${list.year}"></c:out></td>
+														<td><c:out value="${list.month}"></c:out></td>
+														<td><c:out value="${list.date}"></c:out></td>
 													</tr>
-
 												</c:forEach>
 											</c:otherwise>
 										</c:choose>
