@@ -335,6 +335,10 @@
 
 
 
+
+
+
+
     var totalAmount = <c:out value="${item.adult_price}"/>;
     <%--var totalAmount = <fmt:formatNumber type="number" maxFractionDigits="3" value="${item.adult_price}" />--%>
 

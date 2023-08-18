@@ -135,6 +135,11 @@ public class Detail_pageServiceImpl implements Detail_pageService{
 	}
 
 	@Override
+	public List<Detail_page> asc(Detail_pageVo vo) {
+		return dao.asc(vo);
+	}
+
+	@Override
 	public Detail_page detail(Detail_pageVo vo) {
 		return dao.detail(vo);
 	}

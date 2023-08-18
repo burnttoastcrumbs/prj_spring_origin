@@ -609,14 +609,32 @@
 			detail_page
 		WHERE
 			1=1
-		and
-		    country = ${country}
-		and
-		    same = ${same}
+		  and
+			country = ${country}
+		order by
+			<if test="bbbb == 1">aaaaa desc
+		<if test="bbbb == 0">aaaaa asc
+-- 		  and
+-- 		    same = ${same};
 	</select>
 
- 	
- <update id="update" >
+	<!-- ProductMapper.xml -->
+		<select id="asc" resultMap="resultMapObj">
+			SELECT
+				seq,
+				adult_price
+			FROM
+				detail_page
+			ORDER BY
+				adult_price ASC
+		</select>
+
+
+
+
+
+
+	<update id="update" >
  	update
  		detail_page
  	set

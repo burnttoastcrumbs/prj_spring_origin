@@ -70,6 +70,14 @@
                   <i class="fa-solid fa-calendar-days"></i>
                   여행기간 <span class="nights"><c:out value="${country.nights}">1</c:out></span>박 <span class="days"><c:out value="${country.days}">2</c:out></span>일
                 </p>
+
+                <p>
+                  seq : <c:out value="${country.seq}"></c:out>
+                </p>
+                <p>
+                  same : <c:out value="${country.same}"></c:out>
+                </p>
+
               </div>
             </div>
             <div class="price">
@@ -112,6 +120,12 @@
                       <span class="L_arriveMonth"><c:out value="${ml.l_arriveMonth}">9</c:out></span>/<span class="L_arriveDate"><c:out value="${ml.l_arriveDate}">2</c:out></span>(<span class="L_arriveWhatDay"><c:out value="${ml.l_arriveWhatDay}">토</c:out></span>) <span class="L_arriveHour"><c:out value="${ml.l_arriveHour}">15</c:out></span>:<span class="L_arriveMinute"><c:out value="${ml.l_arriveMinute}">50</c:out></span>
                     </span>
                     <span><span class="nights"><c:out value="${ml.nights}">8</c:out></span>박 <span class="days"><c:out value="${ml.days}">10</c:out></span>일</span>
+                  </p>
+                  <p>
+                    seq : <c:out value="${ml.seq}"></c:out>
+                  </p>
+                  <p>
+                    same : <c:out value="${ml.same}"></c:out>
                   </p>
                 </div>
                 <div id="select_price">
@@ -187,6 +201,13 @@
     <p>top</p>
   </a>
 </aside>
+
+
+
+
+
+
+
 </body>
 </html>
 

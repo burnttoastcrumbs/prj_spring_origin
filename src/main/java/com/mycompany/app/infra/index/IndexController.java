@@ -10,6 +10,7 @@ import com.mycompany.app.infra.member.MemberVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -295,8 +296,13 @@ public class IndexController {
 //		List<Detail_page> list13 = weekbest.middleList(vo);
 //		model.addAttribute("list13",list13);
 
-		List<Detail_page> nationList = weekbest.country(vo);
+		List<Detail_page> nationList = weekbest.nationList(vo);
 		model.addAttribute("nationList",nationList);
+
+
+		List<Detail_page> asc = weekbest.asc(vo);
+		model.addAttribute("asc",asc);
+
 
 
 
@@ -304,6 +310,31 @@ public class IndexController {
 
 		return "usr/infra/index/nation";
 	}
+
+
+	@RequestMapping("/search")
+	public String search(@ModelAttribute("vo") Detail_pageVo vo,Model model) {
+
+		List<Detail_page> europe = weekbest.europe(vo);
+		model.addAttribute("europe",europe);
+
+		List<Detail_page> asia = weekbest.asia(vo);
+		model.addAttribute("asia",asia);
+
+		List<Detail_page> america = weekbest.america(vo);
+		model.addAttribute("america",america);
+
+		List<Detail_page> pacific = weekbest.pacific(vo);
+		model.addAttribute("pacific",pacific);
+
+		List<Detail_page> oceania = weekbest.oceania(vo);
+		model.addAttribute("oceania",oceania);
+
+		return "usr/infra/index/search";
+	}
+
+
+
 
 	@RequestMapping("/cruise")
 	public String cruise(@ModelAttribute("vo") Detail_pageVo vo,Model model) {
