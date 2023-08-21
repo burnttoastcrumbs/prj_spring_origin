@@ -24,6 +24,8 @@ public class Detail_pageDao {
 		
 		}
 //	'사'검색 : 사과, 사이다. 2개! count~~
+
+
 	
 	
 	public List<Detail_page> selectList(Detail_pageVo vo){
@@ -175,7 +177,12 @@ public class Detail_pageDao {
 	public int insert(Detail_page dto) {
 		return sqlSession.insert(namespace + ".insert", dto);
 	}
-	
+
+
+
+
+
+
 
 	
 }

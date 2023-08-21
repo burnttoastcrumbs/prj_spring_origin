@@ -74,10 +74,11 @@
 		MiddlePageTitle,
 		country_name,
 		country,
-		MiddlePageTitle,
 		MainPageDetail,
 		defNy
 	</sql>
+
+
  
  	<sql id ="selectCommon">
    		FROM    
@@ -611,9 +612,9 @@
 			1=1
 		  and
 			country = ${country}
-		order by
-			<if test="bbbb == 1">aaaaa desc
-		<if test="bbbb == 0">aaaaa asc
+-- 		order by
+<!--		<if test="bbbb == 1">adult_price desc-->
+<!--		<if test="bbbb == 0">adult_price asc-->
 -- 		  and
 -- 		    same = ${same};
 	</select>
@@ -849,6 +850,18 @@
  		)
  
  </insert>
+
+
+
+
+
+
+
+
+
+
+
+
  
  
  	

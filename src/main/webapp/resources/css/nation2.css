@@ -60,18 +60,19 @@ body {font-family: 'Noto Sans KR', sans-serif;}
 
 
 /* 내용 */
-#section {width: 100%;}
-#section .wrap>p {padding: 20px 0; font-size: 35px;}
+.section {width: 100%;}
+.section .wrap>p {padding-top: 20px; font-size: 35px;}
 #select_box {width: 100%; height: 50px; background-color: rgba(255, 0, 0, .1);}
 #content_box {border-top: 2px solid black; margin-top: 30px; box-sizing: border-box;}
 #sortBy_box {width:100%; height: 51px; border-bottom: 1px solid #ddd; box-sizing: border-box;}
 #sortBy {display: flex; float:right; padding: 15px 0; border-top: 1px solid #ddd;}
 #sortBy li {margin-left: 20px; font-size: 14px;}
+
+.content_wrap {width: 100%; display: flex; justify-content: space-between; padding-bottom: 30px; border-bottom: 1px solid #ddd;}
 #content_box a {font-weight: 400; color:black;}
-#content {border-bottom: 1px solid #ddd; box-sizing: border-box; width: 100%; padding-top: 30px; display: flex; justify-content: space-between;}
-#content {padding-bottom: 30px;}
-#content img {width: 250px; height: 250px; object-fit: cover; margin-right: 25px;}
-#info_wrap {width: 78%; height: 100%; display: flex; justify-content: space-between;}
+.content {width: 100%; padding-top: 30px;}
+.content img {width: 250px; height: 250px; object-fit: cover; margin-right: 25px;}
+.info_wrap {width: 78%; height: 100%; display: flex; justify-content: space-between;}
 #info {width: 75%; height: 100%;}
 .cruise {padding: 1px 5px; box-sizing: border-box; border:1px solid #5b699c; color:#5b699c; font-size: 12px; display: inline-block; margin-bottom:10px;}
 #info p {font-size: 14px; line-height: 22px;}
@@ -79,33 +80,40 @@ body {font-family: 'Noto Sans KR', sans-serif;}
 #info p:last-of-type {margin-bottom: 20px;}
 #info p i {margin-right: 10px;}
 
-#price {width: 20%; display: flex; flex-direction: column; justify-content: space-between; align-items: end;}
-#price>span {float:right; font-weight: normal; font-size: 20px; text-align: end;}
-#price>span span {font-weight: bold; font-size: 25px;}
-#price button {width: 75%; height: 60px; border: 1px solid rgb(94, 43, 184); box-sizing:border-box; color: rgb(94, 43, 184); font-size: 16px; border-radius: 5px; background-color: white;}
-#price button i {margin-left: 13px; font-size: 14px;}
-#price button i:last-child {display: none;}
-#price>button:hover {cursor: pointer;}
-#calandar_wrap {width: 100%; height: fit-content; background-color: #f2f4f7; padding: 30px 30px 0; box-sizing: border-box; border-bottom: 1px solid #ddd; display: none;}
-#calandar_wrap button {width: 100%; height: 70px; border-top: 1px solid #ddd; box-sizing: border-box; background-color: transparent; cursor: pointer; font-size: 16px; cursor: default;}
-#calandar_wrap button span {cursor: pointer;}
+.price {width: 20%; display: flex; flex-direction: column; justify-content: space-between; align-items: end;}
+.price>span {float:right; font-weight: normal; font-size: 20px; text-align: end;}
+.price>span span {font-weight: bold; font-size: 25px;}
+.price button {width: 75%; height: 60px; border: 1px solid rgb(94, 43, 184); box-sizing:border-box; color: rgb(94, 43, 184); font-size: 16px; border-radius: 5px; background-color: white;}
+.price button i {margin-left: 13px; font-size: 14px;}
+.price button i:last-child {display: none;}
+.price>button:hover {cursor: pointer;}
+
+
+#calandar_wrap {width: 100%; height: fit-content; background-color: #f2f4f7; padding: 30px 30px 10px; box-sizing: border-box; border-bottom: 1px solid #ddd; display: none;}
+#calandar_wrap ul {width: 100%; height: fit-content; margin-top: 20px; display: block;}
+#calandar_wrap li {width: 100%; height: 200px; margin-left: 0; margin-bottom: 15px; background-color: white;}
+
+.fold{width: 100%; height: 70px; border-top: 1px solid #ddd; box-sizing: border-box; background-color: blue; cursor: pointer; font-size: 16px; cursor: default;}
+.fold span {cursor: pointer;}
 #calandar_select {width: 100%; height: fit-content; display: flex; align-items: center; justify-content: space-between;}
 #calandar_select span span {color: rgb(94, 43, 184);}
-#calandar_wrap ul {width: 100%; height: fit-content; margin-top: 20px; display: block; }
+
 .select_info {width: 70%; height: 100%; float:left; padding: 20px 0 0 20px; box-sizing: border-box;}
-#calandar_wrap li {width: 100%; height: 200px; margin-left: 0; margin-bottom: 15px; background-color: white;}
-.theme_name {border: 1px solid #5b699c; box-sizing: border-box; width: fit-content; height: fit-content; font-size: 11px; display: flex; align-items: center; justify-content: center; color:#5b699c; margin-bottom: 10px; padding: 3px 5px;}
 .select_info p {line-height: 25px;}
 .select_info p:first-of-type {font-size: 18px; margin-bottom: 10px;}
-.select_info img {width: 20px;}
+.select_info img {width: 20px; height: 14px; margin-right: 0;}
 .select_info p i {margin: 0 4px;}
 .select_info>span {margin-right: 10px;}
 .select_info p:nth-child(4) i:nth-of-type(2) {color:#666; margin-right: 10px;}
+
+.theme_name {border: 1px solid #5b699c; box-sizing: border-box; width: fit-content; height: fit-content; font-size: 11px; display: flex; align-items: center; justify-content: center; color:#5b699c; margin-bottom: 10px; padding: 3px 5px;}
 #select_price {width: 30%; height: 100%; float:right; display: flex; flex-direction: column; justify-content: space-between; align-items: end; padding: 10px 10px 10px 0; box-sizing: border-box;}
 #select_price p {font-size: 18px; font-weight: normal;}
 #select_price p span {font-size: 23px; font-weight: bold;}
 #select_price button {width: 150px; height: 50px; background-color: rgb(94, 43, 184); color:white; border-radius: 5px; font-size: 14px; cursor: pointer;}
-.nothing {display: none;}
+
+
+
 
 /* 푸터 */
 #footer {width: 100%; height: 57px; border-top: #ddd solid 1px; box-sizing: border-box; margin-top: 250px;}

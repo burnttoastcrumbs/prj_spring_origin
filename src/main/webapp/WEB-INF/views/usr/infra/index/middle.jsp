@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하나투어 : 꿈꾸는 대로, 펼쳐지다</title>
-    <link rel="stylesheet" href="/resources/css/middle.css">
+    <link rel="stylesheet" href="/resources/css/middle2.css">
     <script src="/resources/js/jquery-3.6.4.min.js"></script>
     <script src="/resources/js/middle.js"></script>
     <script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
@@ -123,10 +123,10 @@
                     </li>
                     </c:forEach>
                 </ul>
-                <button>
-                    <span>접기</span>
-                    <i class="fa-solid fa-angle-up"></i>
-                </button>
+<%--                <button>--%>
+<%--                    <span>접기</span>--%>
+<%--                    <i class="fa-solid fa-angle-up"></i>--%>
+<%--                </button>--%>
             </div>
         </div>
     </div>

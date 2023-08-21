@@ -1,6 +1,7 @@
 package com.mycompany.app.infra.index;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mycompany.app.infra.codegroup.CodeGroupServiceImpl;
 import com.mycompany.app.infra.detail_page.Detail_page;
 import com.mycompany.app.infra.detail_page.Detail_pageServiceImpl;
 import com.mycompany.app.infra.detail_page.Detail_pageVo;
@@ -34,6 +35,9 @@ public class IndexController {
 
 	@Autowired
 	MemberServiceImpl serviceMember;
+
+	@Autowired
+	Detail_pageServiceImpl service;
 
 
 	@RequestMapping("/biographyUsrView")
@@ -303,6 +307,18 @@ public class IndexController {
 		List<Detail_page> asc = weekbest.asc(vo);
 		model.addAttribute("asc",asc);
 
+
+		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+
+		vo.setParamsPaging(service.selectOneCount(vo));
+
+		if(vo.getTotalRows() > 0) {
+			List<Detail_page> list = service.selectList(vo);
+			model.addAttribute("list", list);
+//			model.addAttribute("vo", vo);
+		} else {
+//			by pass
+		}
 
 
 
