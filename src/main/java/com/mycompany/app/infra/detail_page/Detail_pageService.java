@@ -81,6 +81,7 @@ public interface Detail_pageService {
 	//	public int uelete(Order dto);
 
 
+	public int countNation(Detail_pageVo vo);
 
 	
 }

@@ -138,7 +138,7 @@ body {font-family: 'Noto Sans KR', sans-serif;}
 .count-wrap > button {border: 0;background: white; color: #999; width: 38px;height: 38px;position: absolute;top: 0;font-size: 20px; font-weight: normal;}
 .count-wrap > button.minus {left: 0; border-right: 1px solid #ddd;}
 .count-wrap > button.plus {right: 0; border-left: 1px solid #ddd;}
-.count-wrap .inp {border: 0;height: 38px;text-align: center;display: block;width: 100%;}
+.count-wrap #inp1, .count-wrap #inp2, .count-wrap #inp3 {border: 0;height: 38px;text-align: center;display: block;width: 100%;}
 
 #p_num>span:first-of-type {float:left; font-weight: bold;}
 #p_num>span:last-of-type {font-size: 22px; float:right; font-weight: bold; color:rgb(94, 43, 184); line-height: 25px;}
@@ -149,7 +149,7 @@ body {font-family: 'Noto Sans KR', sans-serif;}
 #pay_button li:first-of-type button {width: 100%; height: 100%; background-color: #5e99cb; color:white; border-radius: 7px; font-size: 20px; cursor:pointer;}
 .like {width: 100%; height: 100%; background-color: white; color: #666; border-radius: 7px; font-size: 20px; border: #ddd 1px solid; box-sizing: border-box; cursor:pointer;}
 .like:hover {border: #666 1px solid; box-sizing: border-box;}
-.like i:last-child {color:rgb(94, 43, 184); display: none;}낮
+.like i:last-child {color:rgb(94, 43, 184); display: none;}
 
 .nothing {display: none;}
 .readyToStart {}

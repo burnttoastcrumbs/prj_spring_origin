@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-    
+
 
 <mapper namespace="com.mycompany.app.infra.detail_page.Detail_pageMapper">
 
@@ -611,7 +611,7 @@
 		WHERE
 			1=1
 		  and
-			country = ${country}
+			country = #{country}
 -- 		order by
 <!--		<if test="bbbb == 1">adult_price desc-->
 <!--		<if test="bbbb == 0">adult_price asc-->
@@ -629,6 +629,18 @@
 			ORDER BY
 				adult_price ASC
 		</select>
+
+
+	<select id="countNation" resultMap="resultMapObj">
+		SELECT
+			count(*)
+		from
+			detail_page
+		where
+			country = #{country}
+		  and
+			defNy=1;
+	</select>
 
 
 

@@ -4,10 +4,11 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/include/includeHanatourHeader.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/include" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index/country.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index/main.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index/middle.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index" />
-        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index/country.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index/test2.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index/nation.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usr/infra/index" />
       </map>
     </option>
   </component>

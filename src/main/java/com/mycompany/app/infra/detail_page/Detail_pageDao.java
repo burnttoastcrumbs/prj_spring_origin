@@ -165,7 +165,14 @@ public class Detail_pageDao {
 	public List<Detail_page> asc(Detail_pageVo vo) {
 		return sqlSession.selectList(namespace + ".asc", vo);
 	}
-	
+
+
+	public int countNation(Detail_pageVo vo){
+
+		return sqlSession.selectOne(namespace + ".countNation", vo);
+
+	}
+
 	public int update(Detail_page dto) {
 		return sqlSession.update(namespace + ".update", dto);
 	}

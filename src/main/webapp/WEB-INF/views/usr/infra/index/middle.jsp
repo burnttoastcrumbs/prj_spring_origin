@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하나투어 : 꿈꾸는 대로, 펼쳐지다</title>
-    <link rel="stylesheet" href="/resources/css/middle2.css">
+    <link rel="stylesheet" href="/resources/css/middle3.css">
     <script src="/resources/js/jquery-3.6.4.min.js"></script>
     <script src="/resources/js/middle.js"></script>
     <script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
@@ -31,19 +31,19 @@
 <section id="section">
     <div class="wrap">
         <p class="country_name"><c:out value="${item.country_name}">이탈리아</c:out></p>
-        <div id="select_box">
+<%--        <div id="select_box">--%>
 
-        </div>
+<%--        </div>--%>
         <div id="content_box">
-            <div id="sortBy_box">
-                <ul id="sortBy">
-                    <!-- <li><a href="#">추천순</a></li>
-                    <li><a href="#">구매순</a></li>
-                    <li><a href="#">평점순</a></li> -->
-                    <li><a href="#">높은 가격순</a></li>
-                    <li><a href="#">낮은 가격순</a></li>
-                </ul>
-            </div>
+<%--            <div id="sortBy_box">--%>
+<%--                <ul id="sortBy">--%>
+<%--                    <!-- <li><a href="#">추천순</a></li>--%>
+<%--                    <li><a href="#">구매순</a></li>--%>
+<%--                    <li><a href="#">평점순</a></li> -->--%>
+<%--                    <li><a href="#">높은 가격순</a></li>--%>
+<%--                    <li><a href="#">낮은 가격순</a></li>--%>
+<%--                </ul>--%>
+<%--            </div>--%>
             <ul>
                 <li id="content">
                     <div id="info_wrap">

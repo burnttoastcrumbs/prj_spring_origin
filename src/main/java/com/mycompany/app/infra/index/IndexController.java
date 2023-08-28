@@ -186,7 +186,7 @@ public class IndexController {
 	}
 
 	@RequestMapping("/purchase")
-	public String purchase(@ModelAttribute("vo") Detail_pageVo vo,Model model) {
+	public String purchase(@ModelAttribute("vo") Detail_pageVo vo,Model model, HttpSession httpSession, MemberVo vo2) {
 
 		Detail_page item = weekbest.purchase(vo);
 		model.addAttribute("item",item);
@@ -206,6 +206,12 @@ public class IndexController {
 		List<Detail_page> oceania = weekbest.oceania(vo);
 		model.addAttribute("oceania",oceania);
 
+		String attach = (String) httpSession.getAttribute("sessionUserSeq");
+
+		Member purchaseInfo = serviceMember.purchaseInfo(vo2);
+		model.addAttribute("item2", purchaseInfo);
+
+//		디비에서 개인정보를 가져온다.
 		return "usr/infra/index/purchase";
 	}
 
@@ -296,29 +302,26 @@ public class IndexController {
 
 		List<Detail_page> country = weekbest.country(vo);
 		model.addAttribute("country",country);
-
-//		List<Detail_page> list13 = weekbest.middleList(vo);
-//		model.addAttribute("list13",list13);
-
+//
 		List<Detail_page> nationList = weekbest.nationList(vo);
 		model.addAttribute("nationList",nationList);
 
 
-		List<Detail_page> asc = weekbest.asc(vo);
-		model.addAttribute("asc",asc);
+//		List<Detail_page> asc = weekbest.asc(vo);
+//		model.addAttribute("asc",asc);
 
 
-		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
-
-		vo.setParamsPaging(service.selectOneCount(vo));
-
-		if(vo.getTotalRows() > 0) {
-			List<Detail_page> list = service.selectList(vo);
-			model.addAttribute("list", list);
-//			model.addAttribute("vo", vo);
-		} else {
-//			by pass
-		}
+//		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+//
+//		vo.setParamsPaging(service.countNation(vo));
+//
+//		if(vo.getTotalRows() > 0) {
+//			List<Detail_page> country = weekbest.country(vo);
+//			model.addAttribute("country", country);
+////			model.addAttribute("vo", vo);
+//		} else {
+////			by pass
+//		}
 
 
 

@@ -44,4 +44,9 @@ import java.util.List;
 		public Member loginUser(MemberVo vo) {
 			return dao.loginUser(vo);
 		}
+
+		@Override
+		public Member purchaseInfo(MemberVo vo) {
+			return dao.purchaseInfo(vo);
+		}
 	}

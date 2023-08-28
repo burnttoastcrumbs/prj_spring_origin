@@ -209,6 +209,11 @@ public class Detail_pageServiceImpl implements Detail_pageService{
 		return dao.country_name(vo);
 	}
 
+	@Override
+	public int countNation(Detail_pageVo vo) {
+		return dao.countNation(vo);
+	}
+
 
 //	@Override
 //	public List<Detail_page> middleList(Detail_pageVo vo) {

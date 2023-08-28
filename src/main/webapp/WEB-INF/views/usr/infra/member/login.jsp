@@ -97,7 +97,7 @@
                 "password" : $("#password").val()},
             success: function(response) {
                 if(response.rt == "success") {
-                    // alert(response.rtMemberUser.name + "님 환영합니다.");
+                    alert(response.rtMemberUser.name + "님 환영합니다.");
                     console.log(1);
                     console.log(response.rtMemberUser.getPassword);
                     location.href = "/main";

@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하나투어 : 꿈꾸는 대로, 펼쳐지다</title>
-    <link rel="stylesheet" href="/resources/css/detail.css">
+    <link rel="stylesheet" href="/resources/css/detail3.css">
     <script src="/resources/js/jquery-3.6.4.min.js"></script>
     <script src="/resources/js/detail2.js"></script>
     <script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
@@ -25,6 +25,8 @@
 
 </head>
 <body>
+
+
 <!-- 헤더 -->
 <%@include file="../include/includeHanatourHeader.jsp"%>
 
@@ -236,9 +238,9 @@
                     </span>
                     <div class="count_box">
                         <div class="count-wrap _count">
-                            <button type="button" class="minus">-</button>
-                            <input type="text" class="inp" value="1" />
-                            <button type="button" class="plus">+</button>
+                            <button type="button" class="minus adult">-</button>
+                            <input type="text" id="inp1" value="1" />
+                            <button type="button" class="plus adult">+</button>
                         </div>
                     </div>
                 </li>
@@ -249,9 +251,9 @@
                     </span>
                     <div class="count_box">
                         <div class="count-wrap _count">
-                            <button type="button" class="minus">-</button>
-                            <input type="text" class="inp" value="0" />
-                            <button type="button" class="plus">+</button>
+                            <button type="button" class="minus child">-</button>
+                            <input type="text" id="inp2" value="0" />
+                            <button type="button" class="plus child">+</button>
                         </div>
                     </div>
                 </li>
@@ -262,15 +264,15 @@
                     </span>
                     <div class="count_box">
                         <div class="count-wrap _count">
-                            <button type="button" class="minus">-</button>
-                            <input type="text" class="inp" value="0" />
-                            <button type="button" class="plus">+</button>
+                            <button type="button" class="minus toddler">-</button>
+                            <input type="text" id="inp3" value="0" />
+                            <button type="button" class="plus toddler">+</button>
                         </div>
                     </div>
                 </li>
             </ul>
             <span>총 금액</span>
-            <span><span id="total_price" ></span>원</span>
+            <span><span id="total_price"></span>원</span>
             <ul id="pay_button">
                 <li>
                     <a href="/purchase?seq=<c:out value="${item.seq}"/>">
@@ -300,54 +302,143 @@
         <p>top</p>
     </a>
 </aside>
+<%--<script>--%>
+<%--    $('._count :button').on({--%>
+<%--        'click' : function(e){--%>
+<%--            e.preventDefault();--%>
+<%--            var $count = $(this).parent('._count').find('.inp');--%>
+<%--            var now = parseInt($count.val());--%>
+<%--            var min = 0;--%>
+<%--            var max = 999;--%>
+<%--            var num = now;--%>
+<%--            var total_price =$('#total_price');--%>
+<%--            if($(this).hasClass('minus')){--%>
+<%--                var type = 'm';--%>
+<%--            }else{--%>
+<%--                var type = 'p';--%>
+<%--            }--%>
+<%--            if(type=='m'){--%>
+<%--                if(now>min){--%>
+<%--                    num = now - 1;--%>
+<%--                }--%>
+<%--            }else{--%>
+<%--                if(now<max){--%>
+<%--                    num = now + 1;--%>
+<%--                }--%>
+<%--            }--%>
+<%--            if(num != now){--%>
+<%--                $count.val(num);--%>
+<%--            }--%>
+
+<%--            total_price.text(${item.adult_price}*num)--%>
+<%--            console.log(total_price.text())--%>
+<%--        }--%>
+<%--    });--%>
+
+
+
+
+
+
+
+<%--    var totalAmount = <c:out value="${item.adult_price}"/>;--%>
+<%--    &lt;%&ndash;var totalAmount = <fmt:formatNumber type="number" maxFractionDigits="3" value="${item.adult_price}" />&ndash;%&gt;--%>
+
+<%--    $(document).ready(function() {--%>
+<%--        //화면 뜨면서 바로 실행되는 스크립트 영역--%>
+<%--        // 총 금액 값을 span 요소에 삽입--%>
+<%--        // alert("dfdf");--%>
+<%--        $('#total_price').text(totalAmount);--%>
+<%--    });--%>
+<%--</script>--%>
+
+
+
+
+
+
 <script>
-    $('._count :button').on({
-        'click' : function(e){
-            e.preventDefault();
-            var $count = $(this).parent('._count').find('.inp');
-            var now = parseInt($count.val());
-            var min = 0;
-            var max = 999;
-            var num = now;
-            var total_price =$('#total_price');
-            if($(this).hasClass('minus')){
-                var type = 'm';
-            }else{
-                var type = 'p';
-            }
-            if(type=='m'){
-                if(now>min){
-                    num = now - 1;
-                }
-            }else{
-                if(now<max){
-                    num = now + 1;
-                }
-            }
-            if(num != now){
-                $count.val(num);
-            }
-
-            total_price.text(${item.adult_price}*num)
-            console.log(total_price.text())
-        }
-    });
-
-
-
-
-
-
-
-    var totalAmount = <c:out value="${item.adult_price}"/>;
-    <%--var totalAmount = <fmt:formatNumber type="number" maxFractionDigits="3" value="${item.adult_price}" />--%>
-
     $(document).ready(function() {
-        //화면 뜨면서 바로 실행되는 스크립트 영역
-        // 총 금액 값을 span 요소에 삽입
-        // alert("dfdf");
-        $('#total_price').text(totalAmount);
+        // 초기 총 가격 표시
+        updateCounts();
     });
+
+    // 초기 수량 값 설정
+    var adultCount = 1;
+    var childCount = 0;
+    var toddlerCount = 0;
+
+    // 가격 정보
+    var adultPrice = ${item.adult_price};
+    var childPrice = ${item.child_price};
+    var toddlerPrice = ${item.toddler_price};
+
+    // 총 가격 요소 선택
+    var total_price = $('#total_price');
+
+    // 수량 업데이트 함수
+    function updateCounts() {
+        var totalPrice = adultPrice * adultCount + childPrice * childCount + toddlerPrice * toddlerCount;
+        total_price.text(totalPrice.toLocaleString()); // 천 단위 쉼표 추가
+    }
+
+    // "+", "-" 버튼 클릭 이벤트 리스너
+    $('._count :button').on('click', function(e) {
+        e.preventDefault();
+
+        var count1 = $(this).parent('._count').find('#inp1');
+        var count2 = $(this).parent('._count').find('#inp2');
+        var count3 = $(this).parent('._count').find('#inp3');
+        var now1 = parseInt(count1.val());
+        var now2 = parseInt(count2.val());
+        var now3 = parseInt(count3.val());
+
+        var type = $(this).hasClass('minus') ? 'm' : 'p';
+        var min_a = 1;
+        var min = 0;
+        var max = 10;
+
+        if (type == 'm') {
+            if (now1 > min_a) {
+                now1--;
+                adultCount = now1; // 성인 수량 업데이트
+            }
+            if (now2 > min) {
+                now2--;
+                childCount = now2; // 아동 수량 업데이트
+            }
+            if (now3 > min) {
+                now3--;
+                toddlerCount = now3; // 유아 수량 업데이트
+            }
+        } else {
+            if (now1 < max) {
+                now1++;
+                adultCount = now1; // 성인 수량 업데이트
+            }
+            if (now2 < max) {
+                now2++;
+                childCount = now2; // 아동 수량 업데이트
+            }
+            if (now3 < max) {
+                now3++;
+                toddlerCount = now3; // 유아 수량 업데이트
+            }
+        }
+
+        count1.val(now1);
+        count2.val(now2);
+        count3.val(now3);
+
+        // 수량 변경에 따른 총 가격 업데이트
+        updateCounts();
+    });
+
+
 </script>
+
+
+
+
 </body>
 </html>

@@ -16,4 +16,6 @@ public interface MemberService {
 	public int uelete(Member dto);
 
     public Member loginUser(MemberVo vo);
+
+	public Member purchaseInfo(MemberVo vo);
 }

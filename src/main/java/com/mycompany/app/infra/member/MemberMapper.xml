@@ -49,6 +49,32 @@
 			  AND password = #{password}
 		</select>
 
+
+
+	<select id="purchaseInfo" resultMap="resultMapObj">
+		SELECT
+		    seq,
+			name,
+			gender,
+			year,
+		    month,
+		    date,
+		    phoneNumber
+		FROM
+			member
+		WHERE	1=1
+		  AND id_Email = #{id_Email}
+		  AND password = #{password}
+	</select>
+
+
+
+
+
+
+
+
+
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
 		<include refid="abc" />

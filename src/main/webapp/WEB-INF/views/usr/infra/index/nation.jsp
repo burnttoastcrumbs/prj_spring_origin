@@ -47,8 +47,12 @@
       </div>
       <ul>
 
-        <input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
-        <input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
+
+        <form name="formList" method="post">
+          <input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
+          <input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
+          <input type="text" name="shKeyword" value="<c:out value="${vo.shKeyword}"/>">
+        </form>
         <c:forEach items="${country}" var="country" varStatus="status">
           <li class="content">
             <div class="content_wrap">
@@ -149,33 +153,33 @@
         </c:forEach>
       </ul>
 
-<%--      <div class="container-fluid px-0 mt-2">--%>
-<%--        <div class="row">--%>
-<%--          <div class="col">--%>
-<%--            <!-- <ul class="pagination pagination-sm justify-content-center mb-0"> -->--%>
-<%--            <ul class="pagination justify-content-center mb-0">--%>
-<%--              <!-- <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-left"></i></a></li> -->--%>
-<%--              <c:if test="${vo.startPage gt vo.pageNumToShow}">--%>
-<%--                <li class="page-item"><a class="page-link" href="javascript:goList(${vo.startPage - 1})"><i class="fa-solid fa-angle-left"></i></a></li>--%>
-<%--              </c:if>--%>
-<%--              <c:forEach begin="${vo.startPage}" end="${vo.endPage}" varStatus="i">--%>
-<%--                <c:choose>--%>
-<%--                  <c:when test="${i.index eq vo.thisPage}">--%>
-<%--                    <li class="page-item active"><a class="page-link" href="javascript:goList(${i.index})">${i.index}</a></li>--%>
-<%--                  </c:when>--%>
-<%--                  <c:otherwise>--%>
-<%--                    <li class="page-item"><a class="page-link" href="javascript:goList(${i.index})">${i.index}</a></li>--%>
-<%--                  </c:otherwise>--%>
-<%--                </c:choose>--%>
-<%--              </c:forEach>--%>
-<%--              <c:if test="${vo.endPage ne vo.totalPages}">--%>
-<%--                <li class="page-item"><a class="page-link" href="javascript:goList(${vo.endPage + 1})"><i class="fa-solid fa-angle-right"></i></a></li>--%>
-<%--              </c:if>--%>
-<%--              <!-- <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-right"></i></a></li> -->--%>
-<%--            </ul>--%>
-<%--          </div>--%>
-<%--        </div>--%>
-<%--      </div>--%>
+      <div class="container-fluid px-0 mt-2">
+        <div class="row">
+          <div class="col">
+            <!-- <ul class="pagination pagination-sm justify-content-center mb-0"> -->
+            <ul class="pagination justify-content-center mb-0">
+              <!-- <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-left"></i></a></li> -->
+              <c:if test="${vo.startPage gt vo.pageNumToShow}">
+                <li class="page-item"><a class="page-link" href="javascript:goList(${vo.startPage - 1})"><i class="fa-solid fa-angle-left"></i></a></li>
+              </c:if>
+              <c:forEach begin="${vo.startPage}" end="${vo.endPage}" varStatus="i">
+                <c:choose>
+                  <c:when test="${i.index eq vo.thisPage}">
+                    <li class="page-item active"><a class="page-link" href="javascript:goList(${i.index})">${i.index}</a></li>
+                  </c:when>
+                  <c:otherwise>
+                    <li class="page-item"><a class="page-link" href="javascript:goList(${i.index})">${i.index}</a></li>
+                  </c:otherwise>
+                </c:choose>
+              </c:forEach>
+              <c:if test="${vo.endPage ne vo.totalPages}">
+                <li class="page-item"><a class="page-link" href="javascript:goList(${vo.endPage + 1})"><i class="fa-solid fa-angle-right"></i></a></li>
+              </c:if>
+              <!-- <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-right"></i></a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <!-- <div id="calandar_wrap">
           <div id="calandar_select">
@@ -212,10 +216,11 @@
               <span>접기</span>
               <i class="fa-solid fa-angle-up"></i>
           </button>
-      </div> -->
+      </div>
     </div>
   </div>
 </section>
+-->
 
 
 
@@ -239,10 +244,11 @@
 
 
 
-<script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script type="text/javascript">
   goList = function(thisPage) {
     $("input:hidden[name=thisPage]").val(thisPage);
-    $("form[name=formList]").attr("action", "codeGroupList").submit();
+    $("form[name=formList]").attr("action", "nation?country=${param.country}").submit();
   }
 </script>
 </body>

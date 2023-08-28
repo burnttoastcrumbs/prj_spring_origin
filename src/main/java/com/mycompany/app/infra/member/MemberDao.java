@@ -43,8 +43,13 @@ public class MemberDao {
 		Member loginUser = sqlSession.selectOne(namespace + ".loginUser", vo);
 		return loginUser;
 	}
-	
-	
+
+
+
+	public Member purchaseInfo(MemberVo vo) {
+		Member purchaseInfo = sqlSession.selectOne(namespace + ".purchaseInfo", vo);
+		return purchaseInfo;
+	}
 	
 	
 	

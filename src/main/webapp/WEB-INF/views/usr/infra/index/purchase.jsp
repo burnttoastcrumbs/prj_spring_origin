@@ -72,9 +72,9 @@
     <div class="section_wrap">
         <div class="customer_info_wrap">
             <p>예약자 정보</p>
-            <p><span>이름/성별</span> <span><span>김도연</span><span>/</span>여</span></p>
-            <p><span>생년월일</span> <span><span>1996</span>/<span>5</span>/<span>21</span></span></p>
-            <p><span>휴대폰번호</span> <span>01088666237</span></p>
+            <p><span>이름/성별</span> <span><span><c:out value="${item2.name}">김도연</c:out></span><span>/</span><c:out value="${item2.gender}">여</c:out></span></p>
+            <p><span>생년월일</span> <span><span><c:out value="${item2.year}">1996</c:out></span>/<span><c:out value="${item2.month}">5</c:out></span>/<span><c:out value="${item2.date}">21</c:out></span></span></p>
+            <p><span>휴대폰번호</span> <span><c:out value="${item2.phoneNumber}">01088666237</c:out></span></p>
         </div>
     </div>
 
