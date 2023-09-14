@@ -230,6 +230,7 @@
         </div>
         <div id="p_num">
             <p>인원선택</p>
+            <form id="reservationForm" action="/purchase" method="post">
             <ul id="count">
                 <li>
                     <span>
@@ -273,10 +274,16 @@
             </ul>
             <span>총 금액</span>
             <span><span id="total_price"></span>원</span>
+
+                <input type="hidden" name="adultCount" value="${adultCount}" />
+                <input type="hidden" name="childCount" value="${childCount}" />
+                <input type="hidden" name="toddlerCount" value="${toddlerCount}" />
+                <input type="hidden" name="totalPrice" value="${totalPrice}" />
+
             <ul id="pay_button">
                 <li>
                     <a href="/purchase?seq=<c:out value="${item.seq}"/>">
-                        <button>예약하기</button>
+                        <button type="<span class="total_price">${param.totalPrice}</span>원">예약하기</button>
                     </a>
                 </li>
                 <li>
@@ -286,6 +293,7 @@
                     </button>
                 </li>
             </ul>
+            </form>
         </div>
     </div>
 </section>
@@ -362,6 +370,15 @@
         // 초기 총 가격 표시
         updateCounts();
     });
+
+
+    // 예약하기 버튼 클릭 이벤트 처리
+    $('#reservationForm').on('submit', function(e) {
+        e.preventDefault();
+        $(this).submit(); // form 제출
+    });
+
+
 
     // 초기 수량 값 설정
     var adultCount = 1;

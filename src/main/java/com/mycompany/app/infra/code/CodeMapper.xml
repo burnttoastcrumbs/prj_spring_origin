@@ -94,7 +94,7 @@
 		FROM
 			code
 		WHERE 1=1
-			AND delNy = 0    
+			AND delNy = 0
     </select>
 
 

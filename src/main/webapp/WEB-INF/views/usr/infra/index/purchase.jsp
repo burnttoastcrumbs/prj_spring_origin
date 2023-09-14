@@ -37,9 +37,9 @@
             <div class="num">
                 <span>인원</span>
                 <ul>
-                    <li>성인 : <span class="adult_number">1</span></li>
-                    <li>아동 : <span class="child_number">0</span></li>
-                    <li>유아 : <span class="toddler_number">0</span></li>
+                    <li>성인 : <span class="adult_number">${param.adultCount}</span></li>
+                    <li>아동 : <span class="child_number">${param.childCount}</span></li>
+                    <li>유아 : <span class="toddler_number">${param.toddlerCount}</span></li>
                 </ul>
             </div>
             <div class="the_date">
@@ -81,15 +81,15 @@
     <div class="section_wrap" id="purchase_info">
         <div class="purchase_info_wrap">
             <p><span>결제상세 내역</span></p>
-            <p><span>총 상품 금액</span> <span><span class="total_price">832,800</span>원</span></p>
-            <p><span><i class="fa-solid fa-caret-down"></i>상품 금액</span> <span><span class="total_price">832,800</span>원</span></p>
+            <p><span>총 상품 금액</span> <span><span class="total_price">${param.totalPrice}</span>원</span></p>
+            <p><span><i class="fa-solid fa-caret-down"></i>상품 금액</span> <span><span class="total_price">${param.totalPrice}</span>원</span></p>
         </div>
 
-        <p><span>최종 결제금액</span> <span><span class="total_price">832,800</span>원</span></p>
+        <p><span>최종 결제금액</span> <span><span class="total_price">${param.totalPrice}</span>원</span></p>
         <p>유류할증료 & 제세공과금 포함</p>
         <button onclick="location.href='final_decision'">
             <p>전액 결제</p>
-            <p><span class="total_price">832,800</span>원</p>
+            <p><span class="total_price">${param.totalPrice}</span>원</p>
         </button>
     </div>
 </section>
